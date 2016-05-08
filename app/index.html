@@ -4,8 +4,60 @@
 		<!-- The css is copied into dist/css/app.css by the copy task -->
 		<link rel="stylesheet" href="css/app.css"/>
 	</head>
-	<body>
-		...
+	<body ng-controller="GameController as game">
+		<h1>Its Mahjong Mayhem!!</h1>
+
+		<div class="container">
+			<div id="games" class="column">
+				<!-- <table class="gameList">
+					<thead>
+						<tr> 	
+							<th>id</th>
+							<th>min</th>
+							<th>max</th>
+							<th> in game </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="gameItem in game.games">
+							<td> {{gameItem.id}} </td>
+							<td> {{gameItem.minPlayers}} </td>
+							<td> {{gameItem.maxPlayers}} </td>
+							<td> {{gameItem.players}}  </td>
+						</tr>
+					</tbody>
+				</table> -->
+
+				<h3> All games </h3>
+				<ul class="gameList">
+					<li ng-repeat="gameItem in game.games">
+						<p> Game - 	{{gameItem.players}} players
+						<a href="#" class="btn"> join </a>  </p>
+					</li>
+				</ul>
+
+
+
+				<form name="createGameForm">
+					<label>Id:</label>
+					<input type="number" ng-model="id" ng-required="true"> 
+					<label>minperson:</label>
+					<input type="number" ng-model="minPlayers" ng-required="true">
+					<label>maxperson:</label>
+					<input type="number" ng-model="maxPlayers" ng-required="true">
+					<button ng-click="createGameForm.$valid && game.createGame()">Create Game</button>
+				</form>
+			</div>
+
+			<div id="gameboard" class="column board">
+			xx
+			</div>
+			<div id="players" class="column">
+			xx
+			</div>
+
+		</div>
+		
 		<script src="js/app.js"></script>
 	</body>
 </html>
