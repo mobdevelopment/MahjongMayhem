@@ -1,13 +1,10 @@
-module.exports = function($stateProvider) {
+module.exports = function ($stateProvider) {
 
-    $stateProvider
-        .state('authcallback', {
-            url: '/authcallback?username&token',
-            resolve: {
-                auth: function($stateParams, $location, AuthFactory) {
-                    AuthFactory.logIn($stateParams);
-                    $location.url("/games");
-                }
-            }
-        });
+	$stateProvider
+		.state('authcallback', {
+			url: '/authcallback?:username&:token',
+			templateUrl: './Game/Views/GameListView.html',
+			controller: 'GameCtrl as GameCtrl'
+		});
+
 }

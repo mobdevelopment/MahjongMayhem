@@ -3,22 +3,24 @@
 		<!-- The css is copied into dist/css/app.css by the copy task -->
 		<link rel="stylesheet" href="css/app.css"/>
 	</head>
-	<body ng-app="Mahjong">
+	<body ng-app="Mahjong" ng-controller="GnrlCtrl as gen">
 		<nav class="navbar">
-			<div></div>
+			<!-- Main menu -->
 			<div>
 				<ul>
 					<li><a ui-sref="games">Games</a></li>
 					<li><a ui-sref="game">Create Game</a></li>
-					<li><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authcallback">Login</a></li>
+					<li ng-if="token == undefined"><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authcallback">Login</a></li>
+					<li ng-if="token != undefined"><a href="#">Logout</a></li>
 				</ul>
 			</div>
+			<!-- Menu for choosing theme's -->
+			<div></div>
+			
 		</nav>
-
-
-		<div ui-view>
+		<div class="container">
+			<div ui-view></div>
 		</div>
-
 
 		<script src="http://mahjongmayhem.herokuapp.com/socket.io/socket.io.js"></script>
 		<script src="js/app.js"></script>
