@@ -7,7 +7,7 @@ module.exports = function($scope, $http, $q, GameFactory){
 	// console.log($scope.games);
 
 	$scope.getGames = function(gameFactory) {
-		$http.get("http://mahjongmayhem.herokuapp.com/games")
+		// $http.get("http://mahjongmayhem.herokuapp.com/games")
 		.success(function (response) {
 			gameFactory.loadGames(response);
 		});
@@ -41,9 +41,9 @@ module.exports = function($scope, $http, $q, GameFactory){
 	}
 
 	self.join = function(gameId) {
-		$http.post("http://mahjongmayhem.herokuapp.com/games/" + gameId + "/players")
-		.success(function (response) {
-			console.log("join game response: " + response);
+		// $http.post("http://mahjongmayhem.herokuapp.com/games/" + gameId + "/players")
+		// .success(function (response) {
+		// 	console.log("join game response: " + response);
 			// window.location.href="/";
 
 		})
@@ -62,11 +62,11 @@ module.exports = function($scope, $http, $q, GameFactory){
 	};
 
 	self.startGame = function(gameId) {
-		$http.post("http://mahjongmayhem.herokuapp.com/games/" + gameId + "/start")
-		.success(function (response) {
-			console.log("start game response: " + response);
-			// window.location.href="/";
-		});
+		// $http.post("http://mahjongmayhem.herokuapp.com/games/" + gameId + "/start")
+		// .success(function (response) {
+		// 	console.log("start game response: " + response);
+		// 	// window.location.href="/";
+		// });
 	};
 
 	$scope.init = function() {
