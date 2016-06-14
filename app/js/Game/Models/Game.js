@@ -1,13 +1,18 @@
-var Game = function() {
+var Game = function(game) {
 	var self = this;
 
-	self.id = "";
-	self.createdBy = new Person();
-	self.createdOn = new Date();
-	self.startedOn = new Date();
-	self.gameTemplate = new GameTemplate;
-	self.players = [];
-	self.maxPlayers = 0
-	self.minPlayers = 0;
-	self.state = "";
+	self.id = game.id;
+	self.createdBy = game.createdBy;
+	self.createdOn = game.createdOn;
+	self.startedOn = game.startedOn;
+	self.endedOn = game.endedOn;
+
+	self.minPlayers = game.minPlayers;
+	self.maxPlayers = game.maxPlayers;
+	self.players = game.players;
+	self.amountOfPlayers = game.players.length;
+
+	self.gameTemplate = game.gameTemplate;
+	self.state = game.state;
+
 }
