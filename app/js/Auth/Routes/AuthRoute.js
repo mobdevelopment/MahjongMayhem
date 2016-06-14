@@ -9,10 +9,5 @@ module.exports = function($stateProvider) {
                     $location.url("/games");
                 }
             }
-        })
-        
-        .state('login', {
-            url: "/login",
-            templateUrl: 'partials/login.html'
         });
 }

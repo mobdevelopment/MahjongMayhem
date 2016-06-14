@@ -1,63 +1,26 @@
 <html lang="en" ng-app="MahjongMayhem">
 	<head>
-		...
 		<!-- The css is copied into dist/css/app.css by the copy task -->
 		<link rel="stylesheet" href="css/app.css"/>
 	</head>
-	<body ng-controller="GameController as game">
-		<h1>Its Mahjong Mayhem!!</h1>
-
-		<div class="container">
-			<div id="games" class="column">
-				<!-- <table class="gameList">
-					<thead>
-						<tr> 	
-							<th>id</th>
-							<th>min</th>
-							<th>max</th>
-							<th> in game </th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="gameItem in game.games">
-							<td> {{gameItem.id}} </td>
-							<td> {{gameItem.minPlayers}} </td>
-							<td> {{gameItem.maxPlayers}} </td>
-							<td> {{gameItem.players}}  </td>
-						</tr>
-					</tbody>
-				</table> -->
-
-				<h3> All games </h3>
-				<ul class="gameList">
-					<li ng-repeat="gameItem in game.games">
-						<p> Game - 	{{gameItem.players}} players
-						<a href="#" class="btn"> join </a>  </p>
-					</li>
+	<body ng-app="Mahjong">
+		<nav class="navbar">
+			<div></div>
+			<div>
+				<ul>
+					<li><a ui-sref="games">Games</a></li>
+					<li><a ui-sref="game">Create Game</a></li>
+					<li><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authcallback">Login</a></li>
 				</ul>
-
-
-
-				<form name="createGameForm">
-					<label>Id:</label>
-					<input type="number" ng-model="id" ng-required="true"> 
-					<label>minperson:</label>
-					<input type="number" ng-model="minPlayers" ng-required="true">
-					<label>maxperson:</label>
-					<input type="number" ng-model="maxPlayers" ng-required="true">
-					<button ng-click="createGameForm.$valid && game.createGame()">Create Game</button>
-				</form>
 			</div>
+		</nav>
 
-			<div id="gameboard" class="column board">
-			xx
-			</div>
-			<div id="players" class="column">
-			xx
-			</div>
 
+		<div ui-view>
 		</div>
-		
+
+
+		<script src="http://mahjongmayhem.herokuapp.com/socket.io/socket.io.js"></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>
