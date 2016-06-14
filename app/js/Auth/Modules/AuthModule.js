@@ -1,7 +1,7 @@
 var authMdul = angular.module('auth', []);
 
 // Factory's
-
+var authFtry = require('../Services/AuthFactory');
 
 // Controllers
 
@@ -18,8 +18,8 @@ var authSrvs = require('../Services/AuthService');
 // Route's
 var authRout = require('../Routes/AuthRoute');
 
-
-gameMdul.factory('AuthService', ['$http', authSrvs]);
-gameMdul.config(authRout);
+authMdul.factory('AuthFtry', authFtry);
+// authMdul.factory('AuthService', ['$http', authSrvs]);
+authMdul.config(authRout);
 
 module.exports = authMdul;
