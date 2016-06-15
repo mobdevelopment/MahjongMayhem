@@ -19,9 +19,9 @@ var gameSrvs = require('../Services/GameService');
 var gameRout = require('../Routes/GameRoute');
 
 
-gameMdul.factory('GameFtry', gameFtry);
+gameMdul.factory('GameFactory', gameFtry);
 gameMdul.factory('GameService', ['$http', gameSrvs]);
-gameMdul.controller('GameCtrl', gameCtrl);
+gameMdul.controller('GameController', gameCtrl);
 gameMdul.config(gameRout);
 
 module.exports = gameMdul;

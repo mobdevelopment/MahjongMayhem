@@ -19,6 +19,6 @@ var gnrlCtrl = require('../Controllers/GeneralController');
 
 
 
-gnrlMdul.controller('GnrlCtrl', gnrlCtrl);
+gnrlMdul.controller('GeneralController', gnrlCtrl);
 
 module.exports = gnrlMdul;

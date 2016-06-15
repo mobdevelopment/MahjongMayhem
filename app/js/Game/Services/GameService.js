@@ -24,7 +24,15 @@ module.exports = function($http){
 		});
 	}
 
-	// GameStates niet nodig
+	// GET :: /GameStates
+	service.getGameStates = function () {
+		return $http({
+			method: 'GET',
+			url: apiBaseUrl + '/GameStates/'
+		}).then(function (response) {
+			return response.data;
+		});
+	}
 
 	// GET :: /Games/:id
 	service.getGame = function (gameId) {

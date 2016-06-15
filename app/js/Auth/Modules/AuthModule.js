@@ -18,7 +18,7 @@ var authFtry = require('../Services/AuthFactory');
 // Route's
 var authRout = require('../Routes/AuthRoute');
 
-authMdul.factory('AuthFtry', authFtry);
+authMdul.factory('AuthFactory', authFtry);
 // authMdul.factory('AuthService', ['$http', authSrvs]);
 authMdul.config(authRout);
 

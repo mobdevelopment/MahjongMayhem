@@ -1,4 +1,6 @@
-var Game = function(game) {
+module.exports	 = function(game) {
+	console.log("Game model:");
+	console.log(game);
 	var self = this;
 
 	self.id = game.id;

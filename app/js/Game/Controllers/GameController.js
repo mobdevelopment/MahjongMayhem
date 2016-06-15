@@ -1,16 +1,31 @@
-module.exports = function($scope, $http, $q, GameFactory){
+var Game = require('../Models/Game');
+module.exports = function($scope, $http, $q, GameService, GameFactory){
 	var self = this;
-	this.games  = GameFactory;
+	self.games;
 	var gameId;
 	var socket;
 	selecTiles = [];
 	// console.log($scope.games);
+	getGames();
+	// self.init = function() {
 
-	$scope.getGames = function(gameFactory) {
+	// }
+
+	function getGames() {
 		// $http.get("http://mahjongmayhem.herokuapp.com/games")
-		.success(function (response) {
-			gameFactory.loadGames(response);
-		});
+		// .success(function (response) {
+		// 	gameFactory.loadGames(response);
+		// });
+		self.games = [];
+		console.log("ik kom hier");
+		GameService.getGames()
+			.then(function successCallback(response) {
+				angular.forEach(response, function (game) {
+					self.games.push(new Game(game));
+				});
+			}, function errorCallback(err) {
+				console.log("ERR:: " + err);
+			});
 	};
 
 	self.open = function(size) {
@@ -46,19 +61,19 @@ module.exports = function($scope, $http, $q, GameFactory){
 		// 	console.log("join game response: " + response);
 			// window.location.href="/";
 
-		})
-		.error(function (response, status) {
-			console.log("join game error response: " + response);
-			console.log("join game error status: " + status);
+		// })
+		// .error(function (response, status) {
+		// 	console.log("join game error response: " + response);
+		// 	console.log("join game error status: " + status);
 
-			if (status == 400) {
-				if (response.message == "") {
-					alert("cant join a game twice");
-				} else {
-					alert("You have to be logged in");
-				}
-			}
-		})
+		// 	if (status == 400) {
+		// 		if (response.message == "") {
+		// 			alert("cant join a game twice");
+		// 		} else {
+		// 			alert("You have to be logged in");
+		// 		}
+		// 	}
+		// })
 	};
 
 	self.startGame = function(gameId) {
