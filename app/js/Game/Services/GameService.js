@@ -1,7 +1,7 @@
 module.exports = function($http){
 	var service = {}; 
 	var apiBaseUrl = "http://mahjongmayhem.herokuapp.com"
-
+	// get all games
 	// GET :: /Games
 	service.getGames = function () {
 		return $http({
@@ -11,9 +11,9 @@ module.exports = function($http){
 			return response.data;
 		});
 	}
-
+	// make a new game
 	// POST :: /Games
-	service.newGame = function (game) {
+	service.CreateGame = function (game) {
 		return $http({
 			method: 'POST',
 			url: apiBaseUrl + '/Games',
@@ -24,31 +24,12 @@ module.exports = function($http){
 		});
 	}
 
-	// GET :: /GameStates
-	service.getGameStates = function () {
-		return $http({
-			method: 'GET',
-			url: apiBaseUrl + '/GameStates/'
-		}).then(function (response) {
-			return response.data;
-		});
-	}
-
+	//get a specific game by id
 	// GET :: /Games/:id
 	service.getGame = function (gameId) {
 		return $http({
 			method: 'GET',
 			url: apiBaseUrl + '/Games/' + gamedId
-		}).then(function (response) {
-			return response.data;
-		});
-	}
-
-	// DELETE :: /Games/:id
-	service.deleteGame = function (gameId) {
-		return $http({
-			method: 'DELETE',
-			url: apiBaseUrl + '/Games/' + gameId
 		}).then(function (response) {
 			return response.data;
 		});
@@ -75,7 +56,7 @@ module.exports = function($http){
 	}
 
 	// GET :: /Games/:id/Tiles
-	service.gameTiles = function (gameId) {
+	service.GetGameBoard = function (gameId) {
 		return $http({
 			method: 'GET',
 			url: apiBaseUrl + '/Games/' + gameId + '/Tiles'
@@ -83,11 +64,6 @@ module.exports = function($http){
 			return response.data;
 		});
 	}
-
-	// /Games/:id/Tiles?matched=true|false
-
-
-	// GET :: /Games/:id/Tiles/matches
 
 	// POST :: /Games/:id/Tiles/matches
 	service.matchTile = function (gameId, tile1, tile2) {
@@ -100,24 +76,5 @@ module.exports = function($http){
 		});
 	}
 
-	// GET :: /GameTemplates
-	service.getTemplates = function() {
-		return $http({
-			method: 'GET',
-			url: apiBaseUrl + '/GameTemplates'
-		}).then(function (response) {
-			return response.data;
-		});
-	}
-
-	// GET :: /GameTemplates/:id
-	service.getTemplate = function(templateId) {
-		return $http({
-			method: 'GET',
-			url: apiBaseUrl + '/GameTemplates/' + templateId
-		}).then(function (response) {
-			return response.data;
-		});
-	}
 	return service;
 }
