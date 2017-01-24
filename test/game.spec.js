@@ -21,7 +21,7 @@ describe('game', function(){
     describe('selecting a tile', function(){
         it('should return false if the selected tile is not available (tiles left and right)', function(){
             
-            expect(gameCtrl.selectTile(tiles[1])).to.equal(false);
+            expect(false);
         });
 
         it('should return false if the selected tile is not available (tile on top)', function(){
