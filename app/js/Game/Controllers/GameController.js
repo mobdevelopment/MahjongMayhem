@@ -61,7 +61,7 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 	self.joinGame = function(game) {
 		GameService.joinGame(game)
 			.then(function successCallback(response) {
-				self.successMessage = 'successfully joined game';
+				self.successMessage = 'Successfully joined game';
 				getGames();
 				self.showMessageBox();
 			}, function errorCallback(err) {
@@ -80,6 +80,23 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 			});
 	};
 
+	self.createGame = function(game) {
+		GameService.createGame(game)
+			.then(function successCallback(response) {
+				self.successMessage = 'Successfully Created a game';
+				self.showMessageBox();
+			}, function errorCallback(err) {
+				self.errorMessage = err.statusText;
+				self.showMessageBox();
+			});
+	};
+
+	self.showMessageBox = function() {
+		$timeout(function() {
+			self.successMessage = '';
+			self.errorMessage = '';
+		}, 3000);
+	};
 	// self.open = function(size) {
 	// 	var modalInstance = $modal.open({
 	// 		templateUrl: '',
