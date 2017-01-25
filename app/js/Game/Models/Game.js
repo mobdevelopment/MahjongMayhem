@@ -3,7 +3,7 @@ module.exports	 = function(game) {
 	var self = this;
 
 	self.id = game._id;
-	// self.createdBy = game.createdBy;
+	self.createdBy = game.createdBy;
 	// self.createdOn = game.createdOn;
 	// self.startedOn = game.startedOn;
 	// self.endedOn = game.endedOn;

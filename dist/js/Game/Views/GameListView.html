@@ -1,4 +1,4 @@
-<div>
+<div class="text-center">
 	<h1>Games</h1>
 
 	<!-- Filter buttons -->
@@ -14,6 +14,9 @@
     <div class="btn-group" role="group">
         <button type="button" class="btn btn-primary" ng-click="myFilter={state:'finished'}">Finished</button>
     </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary" ng-show="gc.currentUser != undefined"  ng-click="myFilter={players: {_id: gc.currentUser}}">MyGames ({{gc.currentUser}})</button>
+    </div>
 
 	<table class="table table-striped">
 		<thead>
@@ -27,16 +30,16 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="game in gc.games">
+			<tr ng-repeat="game in gc.games | filter: myFilter">
 				<td>{{ game.createdBy.name }}</td>
 				<td>{{ game.minPlayers }}</td>
 				<td>{{ game.maxPlayers }}</td>
-				<td>{{ game.amountOfPlayers }}</td>
+				<td>{{ game.players.length }}</td>
 				<td>{{ game.state }}</td>
 				<td>
-					<button ng-show="gCtrl.canJoinGame(game)"  class="btn btn-warning"  ng-click="gCtrl.joinGame(game)">Join</button>
-                	<button ng-show="gCtrl.canPlayGame(game)"  class="btn btn-info"   ui-sref="game({id:game._id})">Open</button>
-                	<button ng-show="gCtrl.canStartGame(game)" class="btn btn-success"  ng-click="gCtrl.startGame(game)">Start</button>
+					<button ng-show="gc.canJoin(game)"  class="btn btn-warning" ng-click="gc.joinGame(game)">Join</button>
+                	<button ng-show="gc.canPlay(game)"  class="btn btn-info"  ui-sref="game({id:game._id})">Open</button>
+                	<button ng-show="gc.canStart(game)" class="btn btn-success" ng-click="gc.startGame(game)">Start</button>
             	</td>
             </tr>
 		</tbody>

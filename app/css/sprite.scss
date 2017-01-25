@@ -1,0 +1,61 @@
+.sprite {
+	&.tile {
+		width: 349px;
+		height: 480px;
+		position: absolute;
+		background-image: url(../img/spriteSD.png);
+
+		&.show {
+			position: relative;
+		}
+	}
+	
+	&.Bamboo1 { background-position: -0px -0px; }
+	&.Bamboo2 { background-position: -0px -480px; }
+	&.Bamboo3 { background-position: -0px -960px; }
+	&.Bamboo4 { background-position: -0px -1440px; }
+	&.Bamboo5 { background-position: -0px -1920px; }
+	&.Bamboo6 { background-position: -0px -2400px; }
+	&.Bamboo7 { background-position: -0px -2880px; }
+	&.Bamboo8 { background-position: -0px -3360px; }
+	&.Bamboo9 { background-position: -0px -3840px; }
+
+	&.Character1 { background-position: -0px -4320px; }
+	&.Character2 { background-position: -0px -4800px; }
+	&.Character3 { background-position: -0px -5280px; }
+	&.Character4 { background-position: -0px -5760px; }
+	&.Character5 { background-position: -0px -6240px; }
+	&.Character6 { background-position: -0px -6720px; }
+	&.Character7 { background-position: -0px -7200px; }
+	&.Character8 { background-position: -0px -7680px; }
+	&.Character9 { background-position: -0px -8160px; }
+
+	&.Stone1 { background-position: -0px -8640px; }
+	&.Stone2 { background-position: -0px -9120px; }
+	&.Stone3 { background-position: -0px -9600px; }
+	&.Stone4 { background-position: -0px -10080px; }
+	&.Stone5 { background-position: -0px -10560px; }
+	&.Stone6 { background-position: -0px -11040px; }
+	&.Stone7 { background-position: -0px -11520px; }
+	&.Stone8 { background-position: -0px -12000px; }
+	&.Stone9 { background-position: -0px -12480px; }
+
+	&.DragonGreen { background-position: -0px -12960px; }
+	&.StoneRed { background-position: -0px -13440px; }
+	&.StoneWhite { background-position: -0px -13920px; }
+
+	&.FlowerBamboo { background-position: -0px -14400px; }
+	&.FlowerChrysanthemum { background-position: -0px -14880px; }
+	&.FlowerOrchid { background-position: -0px -15360px; }
+	&.FlowerPlum { background-position: -0px -15840px; }
+
+	&.SeasonFall { background-position: -0px -16320px; }
+	&.SeasonSpring { background-position: -0px -16800px; }
+	&.SeasonSummer { background-position: -0px -17280px; }
+	&.SeasonWinter { background-position: -0px -17760px; }
+
+	&.WindEast { background-position: -0px -18240px; }
+	&.WindNorth { background-position: -0px -18720px; }
+	&.WindSouth { background-position: -0px -19200px; }
+	&.WindWest { background-position: -0px -19680px; }
+}

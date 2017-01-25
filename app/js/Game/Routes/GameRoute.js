@@ -11,11 +11,9 @@ console.log($stateProvider);
 
 		.state('createGame', {
 			url: '/createGame',
-			params: {'id': null },
 			templateUrl: '/js/Game/Views/CreateGameView.html',
 			controller: 'GameController as gc'
 		})
-
 
 		.state('game', {
 			url: '/game/:id',
@@ -35,14 +33,12 @@ console.log($stateProvider);
 
 		.state('game.board', {
 			url: '/board',
-			params: {'id': null },
 			templateUrl: '/js/Game/Views/GameBoardView.html',
 			controller: 'GameDetailController as gdc'
 		})
 
 		.state('game.detail', {
 			url: '/gameDetails',
-			params: {'id': null },
 			templateUrl: '/js/Game/Views/GameDetailView.html',
 			controller: 'GameDetailController as gdc'
 		});
