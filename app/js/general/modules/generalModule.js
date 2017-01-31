@@ -4,7 +4,7 @@ var gnrlMdul = angular.module('general', []);
 
 
 // Controllers
-var gnrlCtrl = require('../controllers/generalController');
+var gnrlCtrl = require('../controllers/GeneralController');
 
 // Filter's
 
@@ -19,6 +19,6 @@ var gnrlCtrl = require('../controllers/generalController');
 
 
 
-gnrlMdul.controller('generalController', gnrlCtrl);
+gnrlMdul.controller('GeneralController', gnrlCtrl);
 
 module.exports = gnrlMdul;

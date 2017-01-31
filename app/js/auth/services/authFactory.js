@@ -17,6 +17,8 @@ module.exports = function($window){
     };
 
     auth.logIn = function(user){
+        console.log('------------------------------------------');
+        console.log(user.username);
         $window.localStorage['x-token'] = user.token;
         $window.localStorage['x-username'] = user.username;
     };

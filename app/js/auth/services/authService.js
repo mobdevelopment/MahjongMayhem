@@ -32,3 +32,30 @@
 
 // 	return service;
 // }
+
+module.exports = function($localStorage) {
+	var service = {};
+	var self = this;
+
+	self.user = {
+		username: '',
+		token: ''
+	};
+
+	service.getUser = function(){
+		self.user.username = $localStorage.username;
+		self.user.token = $localStorage.token;
+		return self.user;
+	}
+
+	service.setUser = function(username, token) {
+		self.user = new Array();
+		self.user.username = username;
+		self.user.token = token;
+
+		$localStorage.username = username;
+		$localStorage.token = token;
+	}
+
+	return service;
+};

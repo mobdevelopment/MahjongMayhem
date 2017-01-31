@@ -1,10 +1,11 @@
-var Game = require('../models/game');
+var Game = require('../models/Game');
 module.exports = function($scope, $http, $q, GameService, GameFactory){
 	var self = this;
 	self.games;
 	self.currentUser = window.localStorage['username'];
 	// var gameId;
 	// var socket;
+	// console.log(self.games);
 	selecTiles = [];
 	// console.log($scope.games);
 	getGames();

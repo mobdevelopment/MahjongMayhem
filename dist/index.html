@@ -1,10 +1,10 @@
 <html lang="en" ng-app="MahjongMayhem">
 	<head>
 		<!-- The css is copied into dist/css/app.css by the copy task -->
-		<link rel="stylesheet" href="css/app.scss"/>
+		<!-- <link rel="stylesheet" href="css/app.scss"/> -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	</head>
-	<body ng-app="Mahjong" ng-controller="GeneralController as gen">
+	<body ng-app="MahjongMayhem" ng-controller="GeneralController as gen">
 		<nav class="navbar">
 			<div class="">
 				<a class="" ui-sref="general"></a>
@@ -14,6 +14,8 @@
 				<ul class="nav navbar-nav">
 					<li><a ui-sref="games">Games</a></li>
 					<li><a ui-sref="createGame">Create Game</a></li>
+					<!-- <li><a target="_self" ui-sref="login">Login</a></li>
+					<li ng-if="token != undefined"><a ui-sref="logout">Logout</a></li> -->
 					<li ng-if="token == undefined"><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authcallback">Login</a></li>
 					<!-- <li ng-if="token != undefined"><a href="#">Logout</a></li> -->
 				</ul>

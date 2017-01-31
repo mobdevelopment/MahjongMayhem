@@ -4,25 +4,24 @@ console.log($stateProvider);
 
 		.state('games', { // view name
 			url: '/games', // url name
-			templateUrl: '/js/game/views/gameListView.html', // view location
-			controller: 'gameController', // controller used
-			controllerAs: 'gc'
+			templateUrl: '/js/game/views/GameListView.html', // view location
+			controller: 'GameController as gc'
 		})
 
 		.state('createGame', {
 			url: '/createGame',
-			templateUrl: '/js/game/views/createGameView.html',
-			controller: 'gameController as gc'
-		})
-
-		.state('game', {
-			url: '/game/:id',
-			params: {'id': null },
-			templateUrl: '/js/game/views/gameView.html',
-			controller: function ($state, stateParams) {
-				$state.go('game.board');
-			}
+			templateUrl: '/js/game/views/CreateGameView.html',
+			controller: 'GameController as gc'
 		});
+
+		// .state('game', {
+		// 	url: '/game/:id',
+		// 	params: {'id': null },
+		// 	templateUrl: '/js/game/views/gameView.html',
+		// 	controller: function ($state, stateParams) {
+		// 		$state.go('game.board');
+		// 	}
+		// });
 
 		// .state('gameDetails', {
 		// 	url: '/gameDetails/:id',
