@@ -1,7 +1,7 @@
-var authMdul = angular.module('auth', []);
+var authModule = angular.module('auth', []);
 
 // Factory's
-var authFtry = require('../services/AuthFactory');
+// var authFtry = require('../services/AuthFactory');
 
 // Controllers
 // var authCtrl = require('../controller/AuthController');
@@ -13,14 +13,16 @@ var authFtry = require('../services/AuthFactory');
 
 
 // Service's
-// var authSrvs = require('../services/AuthService');
+var authService = require('../services/authService');
+// var authConfig = require('../services/AuthConfig');
 
 // Route's
-var authRout = require('../routes/AuthRoute');
+// var authRout = require('../routes/AuthRoute');
 
-authMdul.factory('AuthFactory', authFtry);
-// authMdul.factory('AuthService', ['$localStorage', authSrvs]);
+// authMdul.factory('AuthFactory', authFtry);
+authModule.factory('authService', authService);
 // gameMdul.controller('AuthController', authCtrl);
-authMdul.config(authRout);
+// authMdul.config(authRout);
+// authMdul.config(authConfig);
 
-module.exports = authMdul;
+module.exports = authModule;

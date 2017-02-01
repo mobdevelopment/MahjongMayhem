@@ -1,10 +1,10 @@
-var gnrlMdul = angular.module('general', []);
+var generalModule = angular.module('general', []);
 
 // Factory's
 
 
 // Controllers
-var gnrlCtrl = require('../controllers/GeneralController');
+var generalController = require('../controllers/generalController');
 
 // Filter's
 
@@ -16,9 +16,10 @@ var gnrlCtrl = require('../controllers/GeneralController');
 
 
 // Route's
+var generalRoute = require('../routes/generalRoute');
 
 
+generalModule.controller('generalController', generalController);
+generalModule.config(generalRoute);
 
-gnrlMdul.controller('GeneralController', gnrlCtrl);
-
-module.exports = gnrlMdul;
+module.exports = generalModule; 

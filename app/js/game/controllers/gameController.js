@@ -118,7 +118,7 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 	// };
 
 	// self.isOwner = function(game) {
-	// 	if (game.createdBy._id === window.localstorage.getItem("username")) {
+	// 	if (game.createdBy._id === window.localStorage.getItem("username")) {
 	// 		return true;
 	// 	} else {
 	// 		return false;

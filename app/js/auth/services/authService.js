@@ -43,8 +43,8 @@ module.exports = function($localStorage) {
 	};
 
 	service.getUser = function(){
-		self.user.username = $localStorage.username;
-		self.user.token = $localStorage.token;
+		self.user.username 	= $localStorage.username;
+		self.user.token 	= $localStorage.token;
 		return self.user;
 	}
 
@@ -53,8 +53,8 @@ module.exports = function($localStorage) {
 		self.user.username = username;
 		self.user.token = token;
 
-		$localStorage.username = username;
-		$localStorage.token = token;
+		$window.localStorage.username = username;
+		$window.localStorage.token = token;
 	}
 
 	return service;

@@ -1,30 +1,33 @@
-<html lang="en" ng-app="MahjongMayhem">
+<html lang="en" ng-app="mahjongMayhem">
 	<head>
 		<!-- The css is copied into dist/css/app.css by the copy task -->
 		<!-- <link rel="stylesheet" href="css/app.scss"/> -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	</head>
-	<body ng-app="MahjongMayhem" ng-controller="GeneralController as gen">
-		<nav class="navbar">
-			<div class="">
-				<a class="" ui-sref="general"></a>
-			</div>
-			<!-- Main menu -->
-			<div>
-				<ul class="nav navbar-nav">
-					<li><a ui-sref="games">Games</a></li>
-					<li><a ui-sref="createGame">Create Game</a></li>
-					<!-- <li><a target="_self" ui-sref="login">Login</a></li>
-					<li ng-if="token != undefined"><a ui-sref="logout">Logout</a></li> -->
-					<li ng-if="token == undefined"><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authcallback">Login</a></li>
-					<!-- <li ng-if="token != undefined"><a href="#">Logout</a></li> -->
-				</ul>
-			</div>
-			<!-- Menu for choosing theme's -->
-			<div></div>
-			
-		</nav>
+	<body ng-app="mahjongMayhem">
+		<!-- <nav class="navbar"> -->
+	<!-- <div class=""> -->
+		<!-- <a class="" ui-sref="general"></a> -->
+	<!-- </div> -->
+	<!-- Main menu -->
+	<!-- <div>
+		<ul class="nav navbar-nav">
+			<li><a ui-sref="games">Games</a></li>
+			<li><a ui-sref="createGame">Create Game</a></li> -->
+			<!-- <li><a target="_self" ui-sref="login">Login</a></li> -->
+<!-- 			<li ng-if="token != undefined"><a ui-sref="logout">Logout</a></li>
+			<li ng-if="token == undefined"><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authcallback">Login</a></li> -->
+			<!-- <li ng-if="token != undefined"><a href="#">Logout</a></li> -->
+<!-- 		</ul>
+	</div> -->
+	<!-- Menu for choosing theme's -->
+	<!-- <div></div> -->
+
+<!-- </nav> -->
 		<div class="container">
+			<div><a ui-sref="error404">err404</a></div>
+			<!-- <div><a ui-sref="login">login</a></div> -->
+			<div><a ui-sref="overview">overview</a></div>
 			<div ui-view></div>
 		</div>
 
