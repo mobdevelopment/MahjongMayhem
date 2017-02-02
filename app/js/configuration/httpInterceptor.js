@@ -1,11 +1,11 @@
-module.exports = function ($rootScope, $localStorage, $q) {
+module.exports = function ($rootScope, $window, $q) {
 	var service = this;
 
 	service.request = function (config) {
 
 		// Check if localStorage.jwt is set.
-		var access_token 	= $localStorage.token,
-			access_username = $localStorage.username;
+		var access_token 	= $window.localStorage['ngStorage-token'],
+			access_username = $window.localStorage['ngStorage-username'];
 
 		// Set the token on the header on authorization
 		if (access_token && access_username) {

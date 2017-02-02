@@ -1,11 +1,11 @@
-var gameMdul = angular.module('game', []);
+var gameModule = angular.module('game', []);
 
 // Factory's
-var gameFtry = require('../services/GameFactory');
+var gameFactory = require('../services/gameFactory');
 
 // Controllers
-var gameCtrl = require('../controllers/GameController');
-// var gamDCtrl = require('../controllers/gameDetailController');
+var gameController = require('../controllers/gameController');
+// var gameDetailController = require('../controllers/gameDetailController');
 // Filter's
 
 
@@ -13,18 +13,18 @@ var gameCtrl = require('../controllers/GameController');
 
 
 // Service's
-var gameSrvs = require('../services/GameService');
-var gameSckt = require('../services/GameSocket');
+var gameService = require('../services/gameService');
+var gameSocket = require('../services/gameSocket');
 
 // Route's
-var gameRout = require('../routes/GameRoute');
+var gameRoute = require('../routes/gameRoute');
 
 
-gameMdul.factory('GameFactory', gameFtry);
-gameMdul.factory('GameService', ['$http', gameSrvs]);
-gameMdul.factory('GameSocket', gameSckt);
-gameMdul.controller('GameController', gameCtrl);
-// gameMdul.controller('gameDetailController', gamDCtrl);
-gameMdul.config(gameRout);
+gameModule.factory('GameFactory', gameFactory);
+gameModule.factory('GameService', ['$http', gameService]);
+gameModule.factory('GameSocket', gameSocket);
+gameModule.controller('GameController', gameController);
+// gameModule.controller('gameDetailController', gameDetailController);
+gameModule.config(gameRoute);
 
-module.exports = gameMdul;
+module.exports = gameModule;

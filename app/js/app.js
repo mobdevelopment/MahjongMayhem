@@ -10,9 +10,3 @@ require('./game/modules/gameModule');
 require('./auth/modules/authModule');
 
 require('./configuration/config');
-
-// Config
-// app.config(function($httpProvider) {
-// 	// $httpProvider.interceptors.push('AuthService');
-// 	$httpProvider.interceptors.push(require('./auth/services/HttpInterceptor'));
-// });

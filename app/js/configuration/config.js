@@ -2,14 +2,14 @@ module.exports = function (app) {
 	app.config(function () {
 
 	})
-	.run(function ($rootScope, $templateCache, $state, $localStorage, $location, authService) {
+	.run(function ($rootScope, $templateCache, $state, $window, $location, authService) {
 		$rootScope.$on('$viewContentLoaded', function () {
 			$templateCache.removeAll();
 		});
 
 		$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
 			if (toState.name !== 'preHome') {
-				if ($localStorage.username === undefined || $localStorage.username === null) {
+				if ($window.localStorage['ngStorage-username'] === undefined || $window.localStorage['ngStorage-username'] === null) {
 					var params = $location.search();
 
 					if (params.username !== undefined) {
@@ -24,7 +24,7 @@ module.exports = function (app) {
 					}
 				}
 			} else {
-				if ($localStorage.username !== undefined) {
+				if ($window.localStorage['ngStorage-username'] !== undefined) {
 					event.preventDefault();
 					$state.go('profile');
 				}

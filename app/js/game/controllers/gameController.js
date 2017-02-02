@@ -1,8 +1,8 @@
-var Game = require('../models/Game');
+var Game = require('../models/game');
 module.exports = function($scope, $http, $q, GameService, GameFactory){
 	var self = this;
 	self.games;
-	self.currentUser = window.localStorage['username'];
+	self.currentUser = $window.localStorage['ngStorage-username'];
 	// var gameId;
 	// var socket;
 	// console.log(self.games);

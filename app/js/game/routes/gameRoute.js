@@ -3,14 +3,14 @@ console.log($stateProvider);
 	$stateProvider
 		.state('games', { // view name
 			url: '/games', // url name
-			templateUrl: '/js/game/views/GameListView.html', // view location
-			controller: 'GameController as gc'
+			templateUrl: '/js/game/views/gameListView.html', // view location
+			controller: 'gameController as gc'
 		})
 
 		.state('createGame', {
 			url: '/createGame',
-			templateUrl: '/js/game/views/CreateGameView.html',
-			controller: 'GameController as gc'
+			templateUrl: '/js/game/views/createGameView.html',
+			controller: 'gameController as gc'
 		});
 
 		// .state('game', {
