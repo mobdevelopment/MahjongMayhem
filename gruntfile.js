@@ -11,12 +11,23 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		sass: {
+	 		dist: {
+	 			options: {
+	 				style: 'expanded'
+	 			},
+	 			files:{
+	 				'dist/css/app.css':'app/css/app.scss',
+	 				'dist/css/sprite.css':'app/css/sprite.scss',
+	 			}
+	 		}
+	 	},
 		copy: {
 			all: {
 			// This copies all the html and css into the dist/ folder
 				expand: true,
 				cwd: 'app/',
-				src: ['**/*.html', '**/*.css'],
+				src: ['**/*.html', '**/*.css', '**/*.png'],
 				dest: 'dist/'
 			}
 		},
@@ -31,6 +42,10 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: 'app/**/*.scss',
+				tasks: 'sass'
+			},
+			png:{
+				files: 'app/**/*.png',
 				tasks: 'copy'
 			}
 		},
@@ -42,17 +57,6 @@ module.exports = function(grunt) {
 				runInBackground: true 
 			}
 		},
-		sass: {
-			dist: {
-				options: {
-					style: 'expanded'
-				},
-				files: {
-					'main.css': 'main.scss',
-					'widgets.css': 'widgets.scss'
-				}
-			}
-		}
 	});
 
 // Load the npm installed tasks
@@ -63,5 +67,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
 // The default tasks to run when you type: grunt
-	grunt.registerTask('default', ['browserify', 'copy', 'http-server', 'watch', 'sass']);
+	grunt.registerTask('default', ['browserify', 'copy', 'http-server', 'sass', 'watch']);
 };
