@@ -1,6 +1,6 @@
-module.exports = function($scope, AuthService) {
+module.exports = function($scope, authService) {
 	var self = this;
 	// $scope.token = window.localStorage['token'];
-	self.currentUser = AuthService.getUser();
+	self.currentUser = authService.getUser();
 
 };

@@ -46,7 +46,7 @@ module.exports = function($http){
 	}
 
 	// POST :: /Games/:id/Players
-	service.joinGame = function (gameid) {
+	service.joinGame = function (gameId) {
 		return $http({
 			method: 'POST',
 			url: apiBaseUrl + '/Games/' + gameId + '/Players'

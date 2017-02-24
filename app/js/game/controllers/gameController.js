@@ -1,8 +1,8 @@
 var Game = require('../models/game');
-module.exports = function($scope, $http, $q, GameService, GameFactory){
+module.exports = function($scope, $http, $q, gameService, gameFactory, authService){
 	var self = this;
 	self.games;
-	self.currentUser = $window.localStorage['ngStorage-username'];
+	self.currentUser = authService.getUser();
 	// var gameId;
 	// var socket;
 	// console.log(self.games);
@@ -15,7 +15,7 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 
 	function getGames() {
 		self.games = [];
-		GameService.getGames()
+		gameService.getGames()
 			.then(function successCallback(response) {
 				angular.forEach(response, function (game) {
 					self.games.push(new Game(game));
@@ -60,7 +60,7 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 	};
 
 	self.joinGame = function(game) {
-		GameService.joinGame(game)
+		gameService.joinGame(game)
 			.then(function successCallback(response) {
 				self.successMessage = 'Successfully joined game';
 				getGames();
@@ -72,7 +72,7 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 	};
 
 	self.startGame = function(game) {
-		GameService.startGame(game)
+		gameService.startGame(game)
 			.then(function (response) {
 				self.successMessage = 'The game has started!';
 				getGames();
@@ -82,7 +82,7 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 	};
 
 	self.createGame = function(game) {
-		GameService.createGame(game)
+		gameService.createGame(game)
 			.then(function successCallback(response) {
 				self.successMessage = 'Successfully Created a game';
 				self.showMessageBox();
@@ -155,7 +155,7 @@ module.exports = function($scope, $http, $q, GameService, GameFactory){
 	// };
 
 	$scope.init = function() {
-		$scope.getGames(GameFactory);
+		$scope.getGames(gameFactory);
 	}
 
 };

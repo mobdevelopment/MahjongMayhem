@@ -20,10 +20,10 @@ var gameSocket = require('../services/gameSocket');
 var gameRoute = require('../routes/gameRoute');
 
 
-gameModule.factory('GameFactory', gameFactory);
-gameModule.factory('GameService', ['$http', gameService]);
-gameModule.factory('GameSocket', gameSocket);
-gameModule.controller('GameController', gameController);
+gameModule.factory('gameFactory', gameFactory);
+gameModule.factory('gameService', ['$http', gameService]);
+gameModule.factory('gameSocket', gameSocket);
+gameModule.controller('gameController', gameController);
 // gameModule.controller('gameDetailController', gameDetailController);
 gameModule.config(gameRoute);
 

@@ -1,4 +1,144 @@
-
-.navbar-nav>li>a {
-	color: #262626;
+.sprite.tile {
+  width: 349px;
+  height: 480px;
+  position: absolute;
+  background-image: url(../img/spriteSD.png);
 }
+.sprite.tile.show {
+  position: relative;
+}
+.sprite.tile.selected {
+  opacity: .6;
+}
+.sprite.tile-Bamboo1 {
+  background-position: 0 0px;
+}
+.sprite.tile-Bamboo2 {
+  background-position: 0 -480px;
+}
+.sprite.tile-Bamboo3 {
+  background-position: 0 -960px;
+}
+.sprite.tile-Bamboo4 {
+  background-position: 0 -1440px;
+}
+.sprite.tile-Bamboo5 {
+  background-position: 0 -1920px;
+}
+.sprite.tile-Bamboo6 {
+  background-position: 0 -2400px;
+}
+.sprite.tile-Bamboo7 {
+  background-position: 0 -2880px;
+}
+.sprite.tile-Bamboo8 {
+  background-position: 0 -3360px;
+}
+.sprite.tile-Bamboo9 {
+  background-position: 0 -3840px;
+}
+.sprite.tile-Character1 {
+  background-position: 0 -4320px;
+}
+.sprite.tile-Character2 {
+  background-position: 0 -4800px;
+}
+.sprite.tile-Character3 {
+  background-position: 0 -5280px;
+}
+.sprite.tile-Character4 {
+  background-position: 0 -5760px;
+}
+.sprite.tile-Character5 {
+  background-position: 0 -6240px;
+}
+.sprite.tile-Character6 {
+  background-position: 0 -6720px;
+}
+.sprite.tile-Character7 {
+  background-position: 0 -7200px;
+}
+.sprite.tile-Character8 {
+  background-position: 0 -7680px;
+}
+.sprite.tile-Character9 {
+  background-position: 0 -8160px;
+}
+.sprite.tile-Stone1 {
+  background-position: 0 -8640px;
+}
+.sprite.tile-Stone2 {
+  background-position: 0 -9120px;
+}
+.sprite.tile-Stone3 {
+  background-position: 0 -9600px;
+}
+.sprite.tile-Stone4 {
+  background-position: 0 -10080px;
+}
+.sprite.tile-Stone5 {
+  background-position: 0 -10560px;
+}
+.sprite.tile-Stone6 {
+  background-position: 0 -11040px;
+}
+.sprite.tile-Stone7 {
+  background-position: 0 -11520px;
+}
+.sprite.tile-Stone8 {
+  background-position: 0 -12000px;
+}
+.sprite.tile-Stone9 {
+  background-position: 0 -12480px;
+}
+.sprite.tile-DragonGreen {
+  background-position: 0 -12960px;
+}
+.sprite.tile-DragonRed {
+  background-position: 0 -13440px;
+}
+.sprite.tile-DragonWhite {
+  background-position: 0 -13920px;
+}
+.sprite.tile-FlowerBamboo {
+  background-position: 0 -14400px;
+}
+.sprite.tile-FlowerChrysanthemum {
+  background-position: 0 -14880px;
+}
+.sprite.tile-FlowerOrchild {
+  background-position: 0 -15360px;
+}
+.sprite.tile-FlowerPlum {
+  background-position: 0 -15840px;
+}
+.sprite.tile-SeasonFall {
+  background-position: 0 -16320px;
+}
+.sprite.tile-SeasonSpring {
+  background-position: 0 -16800px;
+}
+.sprite.tile-SeasonSummer {
+  background-position: 0 -17280px;
+}
+.sprite.tile-SeasonWinter {
+  background-position: 0 -17760px;
+}
+.sprite.tile-WindEast {
+  background-position: 0 -18240px;
+}
+.sprite.tile-WindNorth {
+  background-position: 0 -18720px;
+}
+.sprite.tile-WindSouth {
+  background-position: 0 -19200px;
+}
+.sprite.tile-WindWest {
+  background-position: 0 -19680px;
+}
+
+.navbar-nav > li > a {
+  color: #262626;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,16 +1,20 @@
 module.exports = function ($stateProvider) {
-console.log($stateProvider);
+// console.log($stateProvider);
 	$stateProvider
+		.state('mahgame', {
+			url: '/mahgame',
+			templateUrl: '/js/game/views/mahgame.html',
+			controller: 'gameController as gameCon'
+		})
 		.state('games', { // view name
 			url: '/games', // url name
 			templateUrl: '/js/game/views/gameListView.html', // view location
-			controller: 'gameController as gc'
+			controller: 'gameController as gameCon'
 		})
-
 		.state('createGame', {
 			url: '/createGame',
 			templateUrl: '/js/game/views/createGameView.html',
-			controller: 'gameController as gc'
+			controller: 'gameController as gameCon'
 		});
 
 		// .state('game', {

@@ -33,7 +33,7 @@
 // 	return service;
 // }
 
-module.exports = function($window) {
+module.exports = function($localStorage) {
 	var service = {};
 	var self = this;
 
@@ -43,8 +43,8 @@ module.exports = function($window) {
 	};
 
 	service.getUser = function(){
-		self.user.username 	= $window.localStorage['ngStorage-username'];
-		self.user.token 	= $window.localStorage['ngStorage-token'];
+		self.user.username 	= $localStorage.username;
+		self.user.token 	= $localStorage.token;
 		return self.user;
 	}
 
@@ -53,8 +53,8 @@ module.exports = function($window) {
 		self.user.username = username;
 		self.user.token = token;
 
-		$window.localStorage['ngStorage-username'] = username;
-		$window.localStorage['ngStorage-token'] = token;
+		$localStorage.username = username;
+		$localStorage.token = token;
 	}
 
 	return service;
