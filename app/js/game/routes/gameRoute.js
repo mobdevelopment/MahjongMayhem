@@ -6,11 +6,11 @@ module.exports = function ($stateProvider) {
 			templateUrl: '/js/game/views/mahgame.html',
 			controller: 'gameController as gameCon'
 		})
-		.state('games', { // view name
-			url: '/games', // url name
-			templateUrl: '/js/game/views/gameListView.html', // view location
-			controller: 'gameController as gameCon'
-		})
+		// .state('games', { // view name
+		// 	url: '/games', // url name
+		// 	templateUrl: '/js/game/views/gameListView.html', // view location
+		// 	controller: 'gameController as gameCon'
+		// })
 		.state('createGame', {
 			url: '/createGame',
 			templateUrl: '/js/game/views/createGameView.html',

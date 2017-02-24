@@ -27,13 +27,13 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 
 	// Boolean checks if a player can join, start or play a game.
 	self.canJoin = function(game) {
-		if (self.currentUser == undefined || game.createdBy._id == self.currentUser || game.state != 'open' || game.maxPlayers <= game.players.length) {
+		if (self.currentUser.username == undefined || game.createdBy._id == self.currentUser.username || game.state != 'open' || game.maxPlayers <= game.players.length) {
 			return false;
 		}
 		else {
 			if (game.players.length > 0) {
 				for (var i = 0; i < game.players.length; i++) {
-					if (game.players[i]._id == self.currentUser) {
+					if (game.players[i]._id == self.currentUser.username) {
 						return false;
 					}
 				}
@@ -43,10 +43,10 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 	};
 
 	self.canPlay = function(game) {
-		if (self.currentUser != undefined && game.state != 'open') {
+		if (self.currentUser.username != undefined && game.state != 'open') {
 			if (game.players.length > 0) {
 				for (var i = 0; i < game.players.length; i++) {
-					if (game.players[i]._id == self.currentUser) {
+					if (game.players[i]._id == self.currentUser.username) {
 						return true;
 					}
 				}
@@ -56,7 +56,7 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 	};
 
 	self.canStart = function(game) {
-		return game.createdBy._id == self.currentUser && game.players.length >= game.minPlayers && game.state == "open";
+		return game.createdBy._id == self.currentUser.username && game.players.length >= game.minPlayers && game.state == "open";
 	};
 
 	self.joinGame = function(game) {
