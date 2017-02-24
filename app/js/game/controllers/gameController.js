@@ -23,6 +23,8 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
+		console.log('-all games- ');
+		console.log(self.games);
 	};
 
 	// Boolean checks if a player can join, start or play a game.
@@ -82,14 +84,16 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 	};
 
 	self.createGame = function(game) {
-		gameService.createGame(game)
-			.then(function successCallback(response) {
-				self.successMessage = 'Successfully Created a game';
-				self.showMessageBox();
-			}, function errorCallback(err) {
-				self.errorMessage = err.statusText;
-				self.showMessageBox();
-			});
+		console.log('-create game data- ');
+		console.log(game);
+		// gameService.createGame(game)
+		// 	.then(function successCallback(response) {
+		// 		self.successMessage = 'Successfully Created a game';
+		// 		self.showMessageBox();
+		// 	}, function errorCallback(err) {
+		// 		self.errorMessage = err.statusText;
+		// 		self.showMessageBox();
+		// 	});
 	};
 
 	self.showMessageBox = function() {
