@@ -1,5 +1,5 @@
 var Game = require('../models/game');
-module.exports = function($scope, $http, $q, gameService, gameFactory, authService){
+module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory, authService){
 	var self = this;
 	self.games;
 	self.currentUser = authService.getUser();
@@ -9,6 +9,8 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 	selecTiles = [];
 	// console.log($scope.games);
 	getGames();
+	self.successMessage = '';
+	self.errorMessage = '';
 	// self.init = function() {
 
 	// }
@@ -23,8 +25,8 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
-		console.log('-all games- ');
-		console.log(self.games);
+		// console.log('-all games- ');
+		// console.log(self.games);
 	};
 
 	// Boolean checks if a player can join, start or play a game.
@@ -86,19 +88,19 @@ module.exports = function($scope, $http, $q, gameService, gameFactory, authServi
 	self.createGame = function(game) {
 		console.log('-create game data- ');
 		console.log(game);
-		// gameService.createGame(game)
-		// 	.then(function successCallback(response) {
-		// 		self.successMessage = 'Successfully Created a game';
-		// 		self.showMessageBox();
-		// 	}, function errorCallback(err) {
-		// 		self.errorMessage = err.statusText;
-		// 		self.showMessageBox();
-		// 	});
+		gameService.createGame(game)
+			.then(function successCallback(response) {
+				self.successMessage = 'Successfully created a game';
+				self.showMessageBox();
+			}, function errorCallback(err) {
+				self.errorMessage = err.statusText;
+				self.showMessageBox();
+			});
 	};
 
 	self.showMessageBox = function() {
 		$timeout(function() {
-			self.successMessage = '';
+			self.successMessage	 = '';
 			self.errorMessage = '';
 		}, 3000);
 	};

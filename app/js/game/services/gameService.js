@@ -13,7 +13,7 @@ module.exports = function($http){
 	}
 	// make a new game
 	// POST :: /Games
-	service.CreateGame = function (game) {
+	service.createGame = function (game) {
 		return $http({
 			method: 'POST',
 			url: apiBaseUrl + '/Games',
@@ -56,7 +56,7 @@ module.exports = function($http){
 	}
 
 	// GET :: /Games/:id/Tiles
-	service.GetGameBoard = function (gameId) {
+	service.getGameBoard = function (gameId) {
 		return $http({
 			method: 'GET',
 			url: apiBaseUrl + '/Games/' + gameId + '/Tiles'
