@@ -1,20 +1,21 @@
 var Game = require('../models/game');
+var GameTemplate = require('../models/gameTemplate');
 module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory, authService){
 	var self = this;
 	self.games;
+	self.gameTemplates;
 	self.currentUser = authService.getUser();
 	// var gameId;
 	// var socket;
-	// console.log(self.games);
 	selecTiles = [];
-	// console.log($scope.games);
-	getGames();
+
 	self.successMessage = '';
 	self.errorMessage = '';
 	self.gameDetail;
-	// self.init = function() {
 
-	// }
+	getGames();
+	getGameTemplates();
+
 
 	function getGames() {
 		self.games = [];
@@ -26,8 +27,18 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
-		// console.log('-all games- ');
-		// console.log(self.games);
+	};
+
+	function getGameTemplates() {
+		self.gameTemplates = [];
+		gameService.getGameTemplates()
+			.then(function successCallback(response) {
+				angular.forEach(response, function (gameTemplate) {
+					self.gameTemplates.push(new GameTemplate(gameTemplate));
+				});
+			}, function errorCallback(err) {
+				console.log("ERR:: " + err);
+			});
 	};
 
 	// Boolean checks if a player can join, start or play a game.

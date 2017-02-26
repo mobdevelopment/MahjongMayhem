@@ -76,5 +76,16 @@ module.exports = function($http){
 		});
 	}
 
+	// get all games templates
+	// GET :: /GameTemplates
+	service.getGameTemplates = function () {
+		return $http({
+			method: 'GET',
+			url: apiBaseUrl + '/GameTemplates'
+		}).then(function (response) {
+			return response.data;
+		});
+	}
+
 	return service;
 };
