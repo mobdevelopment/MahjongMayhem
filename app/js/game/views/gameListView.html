@@ -3,20 +3,20 @@
 
 	<!-- Filter buttons -->
 	<div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" ng-click="myFilter={state:''}">All</button>
-    </div>
-    <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" ng-click="myFilter={state:'open'}">Open</button>
-    </div>
-    <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" ng-click="myFilter={state:'playing'}">Playing</button>
-    </div>
-    <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" ng-click="myFilter={state:'finished'}">Finished</button>
-    </div>
-    <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" ng-show="gameCon.currentUser.username != undefined"  ng-click="myFilter={players: {_id: gameCon.currentUser.username}}">MyGames ({{gameCon.currentUser.username}})</button>
-    </div>
+		<button type="button" class="btn btn-primary" ng-click="myFilter={state:''}">All</button>
+	</div>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-primary" ng-click="myFilter={state:'open'}">Open</button>
+	</div>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-primary" ng-click="myFilter={state:'playing'}">Playing</button>
+	</div>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-primary" ng-click="myFilter={state:'finished'}">Finished</button>
+	</div>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-primary" ng-show="gameCon.currentUser.username != undefined"  ng-click="myFilter={players: {_id: gameCon.currentUser.username}}">MyGames ({{ gameCon.currentUser.username }})</button>
+	</div>
 
 	<table class="table table-striped">
 		<thead>
@@ -30,18 +30,18 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="game in gameCon.games | filter: myFilter">
+			<tr ng-repeat="game in gameCon.games | filter: myFilter" ng-click="gameCon.showGameDetail(game)">
 				<td>{{ game.createdBy.name }}</td>
 				<td>{{ game.minPlayers }}</td>
 				<td>{{ game.maxPlayers }}</td>
 				<td>{{ game.players.length }}</td>
 				<td>{{ game.state }}</td>
 				<td>
-					<button ng-show="gameCon.canJoin(game)"  class="btn btn-warning" ng-click="gameCon.joinGame(game)">Join</button>
-                	<button ng-show="gameCon.canPlay(game)"  class="btn btn-info"  ui-sref="game({id:game._id})">Open</button>
-                	<button ng-show="gameCon.canStart(game)" class="btn btn-success" ng-click="gameCon.startGame(game)">Start</button>
-            	</td>
-            </tr>
+					<button ng-show="gameCon.canJoin(game)"  class="btn btn-warning" ng-click="gameCon.joinGame(game.id)">Join</button>
+					<button ng-show="gameCon.canPlay(game)"  class="btn btn-info"  ui-sref="game({id:game.id})">Open</button>
+					<button ng-show="gameCon.canStart(game)" class="btn btn-success" ng-click="gameCon.startGame(game.id)">Start</button>
+				</td>
+			</tr>
 		</tbody>
 	</table>
 </div>

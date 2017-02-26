@@ -1,3 +1,38 @@
-<div>
-<h1>hallo</h1>
+<div class="text-center">
+	<h1>GameDetail</h1>
+
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td>Game Template: </td>
+				<td>{{ gameCon.gameDetail.gameTemplate.id }}</td>
+			</tr>
+			<tr>
+				<td>Created on: </td>
+				<td>{{ gameCon.gameDetail.createdOn | date : "dd/MM/y"}}</td>
+			</tr>
+			<tr>
+				<td>Started on: </td>
+				<td>{{ gameCon.gameDetail.startedOn | date : "dd/MM/y"}}</td>
+			</tr>
+			<tr>
+				<td>Ended on: </td>
+				<td>{{ gameCon.gameDetail.endedOn | date : "dd/MM/y"}}</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Deelnemers:</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in gameCon.gameDetail.players">
+				<td>{{ user.name }}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>

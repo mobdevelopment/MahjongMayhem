@@ -11,6 +11,7 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 	getGames();
 	self.successMessage = '';
 	self.errorMessage = '';
+	self.gameDetail;
 	// self.init = function() {
 
 	// }
@@ -63,8 +64,8 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 		return game.createdBy._id == self.currentUser.username && game.players.length >= game.minPlayers && game.state == "open";
 	};
 
-	self.joinGame = function(game) {
-		gameService.joinGame(game)
+	self.joinGame = function(gameId) {
+		gameService.joinGame(gameId)
 			.then(function successCallback(response) {
 				self.successMessage = 'Successfully joined game';
 				getGames();
@@ -75,8 +76,8 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 			});
 	};
 
-	self.startGame = function(game) {
-		gameService.startGame(game)
+	self.startGame = function(gameId) {
+		gameService.startGame(gameId)
 			.then(function (response) {
 				self.successMessage = 'The game has started!';
 				getGames();
@@ -86,8 +87,6 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 	};
 
 	self.createGame = function(game) {
-		console.log('-create game data- ');
-		console.log(game);
 		gameService.createGame(game)
 			.then(function successCallback(response) {
 				self.successMessage = 'Successfully created a game';
@@ -96,6 +95,10 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 				self.errorMessage = err.statusText;
 				self.showMessageBox();
 			});
+	};
+
+	self.showGameDetail = function(game) {
+		self.gameDetail = game;
 	};
 
 	self.showMessageBox = function() {
