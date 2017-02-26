@@ -31,6 +31,7 @@ module.exports = function($http){
 			method: 'GET',
 			url: apiBaseUrl + '/Games/' + gamedId
 		}).then(function (response) {
+			console.log(response);
 			return response.data;
 		});
 	}
@@ -39,7 +40,7 @@ module.exports = function($http){
 	service.startGame = function (gameId) {
 		return $http({
 			method: 'POST',
-			url: apiBaseUrl + '/Game/' + gameId + '/Start'
+			url: apiBaseUrl + '/Games/' + gameId + '/Start'
 		}).then(function (response) {
 			return response.data;
 		});

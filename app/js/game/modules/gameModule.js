@@ -5,7 +5,7 @@ var gameFactory = require('../services/gameFactory');
 
 // Controllers
 var gameController = require('../controllers/gameController');
-// var gameDetailController = require('../controllers/gameDetailController');
+var gameBoardController = require('../controllers/gameBoardController');
 // Filter's
 
 
@@ -24,7 +24,7 @@ gameModule.factory('gameFactory', gameFactory);
 gameModule.factory('gameService', ['$http', gameService]);
 gameModule.factory('gameSocket', gameSocket);
 gameModule.controller('gameController', gameController);
-// gameModule.controller('gameDetailController', gameDetailController);
+gameModule.controller('gameBoardController', gameBoardController);
 gameModule.config(gameRoute);
 
 module.exports = gameModule;

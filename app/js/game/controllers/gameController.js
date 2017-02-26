@@ -27,6 +27,7 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
+			console.log(self.games);
 	};
 
 	function getGameTemplates() {
@@ -88,6 +89,7 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 	};
 
 	self.startGame = function(gameId) {
+		console.log('clicked game start');
 		gameService.startGame(gameId)
 			.then(function (response) {
 				self.successMessage = 'The game has started!';

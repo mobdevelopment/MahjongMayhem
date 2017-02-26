@@ -15,16 +15,16 @@ module.exports = function ($stateProvider) {
 			url: '/createGame',
 			templateUrl: '/js/game/views/createGameView.html',
 			controller: 'gameController as gameCon'
+		})
+		.state('game', {
+			url: '/game/:id',
+			params: {'id': null },
+			templateUrl: '/js/game/views/gameBoardView.html',
+			controller: 'gameBoardController as gameCon'
+			// controller: function ($state, stateParams) {
+			// 	$state.go('game.board');
+			// }
 		});
-
-		// .state('game', {
-		// 	url: '/game/:id',
-		// 	params: {'id': null },
-		// 	templateUrl: '/js/game/views/gameView.html',
-		// 	controller: function ($state, stateParams) {
-		// 		$state.go('game.board');
-		// 	}
-		// });
 
 		// .state('gameDetails', {
 		// 	url: '/gameDetails/:id',
@@ -37,7 +37,7 @@ module.exports = function ($stateProvider) {
 		// 	url: '/board',
 		// 	templateUrl: '/js/game/views/gameBoardView.html',
 		// 	controller: 'gameDetailController as gdc'
-		// })
+		// });
 
 		// .state('game.detail', {
 		// 	url: '/gameDetails',

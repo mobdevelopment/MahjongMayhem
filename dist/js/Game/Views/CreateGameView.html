@@ -1,6 +1,8 @@
 <div class="">
 	<div ng-include="'/js/game/views/partials/navbar.html'"></div>
 
+	<div ng-include="'/js/game/views/partials/alert.html'"></div>
+
 	<table class="table">
 		<thead>
 			<tr>
@@ -13,12 +15,6 @@
 		<tbody>
 			<td>
 				<select ng-model="gameCon.game.templateName" ng-options="template.id as template.id for template in gameCon.gameTemplates"></select>
-				<!-- <select ng-model="gameCon.game.templateName"> -->
-<!-- 					<option ng-repeat="gameCon.gameTemplate">
-					<option value="Dragon">Dragon</option>
-					<option value="Ox">Ox</option>
-					<option value="Ram">Ram</option>
-				</select> -->
 			</td>
 			<td><input type="text" ng-model="gameCon.game.minPlayers"></td>
 			<td><input type="text" ng-model="gameCon.game.maxPlayers"></td>
@@ -26,5 +22,4 @@
 		</tbody>
 	</table>
 
-	<div ng-include="'/js/game/views/partials/alert.html'"></div>
 </div>
