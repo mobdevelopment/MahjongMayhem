@@ -1,19 +1,38 @@
 var Game = require('../models/game');
 var GameTemplate = require('../models/gameTemplate');
-module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory, authService){
+module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService, gameFactory, authService){
 	var self = this;
-	self.games;
 	self.gameTemplates;
 	self.currentUser = authService.getUser();
-	// var gameId;
+	self.tiles;
+	self.gameId;
 	// var socket;
-	selecTiles = [];
+	selectedTiles = [];
 
 	self.successMessage = '';
 	self.errorMessage = '';
 	self.gameDetail;
+	// qprint();
+	init();
 
+	function getGameBoard(gameId) {
+		self.gameId = gameId
+		self.tiles = [];
+		gameService.getGameBoard(self.gameId)
+			.then(function successCallback(response) {
+				angular.forEach(response, function (tile) {
+					self.tiles.push(tile);
+				});
+			}, function errorCallback(err) {
+				console.log("ERR:: " + err);
+			});
+			console.log(self.tiles);
+	};
 
+function qprint() {
+	console.log("hallo pi");
+	console.log($stateParams.id);
+};
 
 	self.showMessageBox = function() {
 		$timeout(function() {
@@ -22,8 +41,10 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 		}, 3000);
 	};
 
-	$scope.init = function() {
-		
+	function init() {
+		self.gameId = $stateParams.id;
+		getGameBoard(self.gameId);
+
 	}
 
 };

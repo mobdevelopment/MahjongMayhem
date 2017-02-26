@@ -21,28 +21,16 @@ module.exports = function ($stateProvider) {
 			params: {'id': null },
 			templateUrl: '/js/game/views/gameBoardView.html',
 			controller: 'gameBoardController as gameCon'
-			// controller: function ($state, stateParams) {
-			// 	$state.go('game.board');
+			// controller: function ($scope, $state, $stateParams) {
+			// 	$scope.gameId = $stateParams.id;
+			// 	console.log($scope.gameId);
+			// 	$state.go('gameboard');
 			// }
+		})
+		.state('gameboard', {
+			url: '/board',
+			templateUrl: '/js/game/views/gameBoardView.html',
+			controller: 'gameBoardController as gameCon'
 		});
-
-		// .state('gameDetails', {
-		// 	url: '/gameDetails/:id',
-		// 	params: {'id': null },
-		// 	templateUrl: '/js/game/views/gameDetailView.html',
-		// 	controller: 'gameDetailController as gdc'
-		// })
-
-		// .state('game.board', {
-		// 	url: '/board',
-		// 	templateUrl: '/js/game/views/gameBoardView.html',
-		// 	controller: 'gameDetailController as gdc'
-		// });
-
-		// .state('game.detail', {
-		// 	url: '/gameDetails',
-		// 	templateUrl: '/js/game/views/gameDetailView.html',
-		// 	controller: 'gameDetailController as gdc'
-		// });
 
 };

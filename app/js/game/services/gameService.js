@@ -24,6 +24,7 @@ module.exports = function($http){
 		});
 	}
 
+	// -- CURRENTLY NOT USED FOR ANY PURPOSE
 	//get a specific game by id
 	// GET :: /Games/:id
 	service.getGame = function (gameId) {

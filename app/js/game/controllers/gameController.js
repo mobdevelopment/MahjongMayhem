@@ -7,14 +7,12 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 	self.currentUser = authService.getUser();
 	// var gameId;
 	// var socket;
-	selecTiles = [];
 
 	self.successMessage = '';
 	self.errorMessage = '';
 	self.gameDetail;
 
-	getGames();
-	getGameTemplates();
+	init();
 
 
 	function getGames() {
@@ -27,7 +25,7 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
-			console.log(self.games);
+			// console.log(self.games);
 	};
 
 	function getGameTemplates() {
@@ -176,8 +174,9 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 	// 	// });
 	// };
 
-	$scope.init = function() {
-		$scope.getGames(gameFactory);
+	function init() {
+		getGames();
+		getGameTemplates();
 	}
 
 };
