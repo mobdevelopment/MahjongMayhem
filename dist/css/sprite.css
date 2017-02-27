@@ -137,4 +137,17 @@
   background-position: 0 -19680px;
 }
 
+._tile {
+  width: 349px;
+  height: 480px;
+  position: absolute;
+  background-image: url(../img/_tile.png);
+}
+._tile.show {
+  position: relative;
+}
+._tile.selected {
+  opacity: .6;
+}
+
 /*# sourceMappingURL=sprite.css.map */

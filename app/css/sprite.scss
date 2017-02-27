@@ -20,8 +20,8 @@ $tile-height: 480px;
 		}
 
 		&.selected {
-        	opacity: .6; 
-        }
+			opacity: .6; 
+		}
 
 		@each $tile in $tiles {
 			$index: index($tiles, $tile) - 1;
@@ -30,5 +30,20 @@ $tile-height: 480px;
 			  background-position: 0 #{-480*$index}px;
 			}
 		}
+	}
+}
+
+._tile {
+	width: 349px;
+	height: 480px;
+	position: absolute;
+	background-image: url(../img/_tile.png);
+
+	&.show {
+		position: relative;
+	}
+
+	&.selected {
+		opacity: .6; 
 	}
 }
