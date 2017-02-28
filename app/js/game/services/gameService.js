@@ -30,9 +30,8 @@ module.exports = function($http){
 	service.getGame = function (gameId) {
 		return $http({
 			method: 'GET',
-			url: apiBaseUrl + '/Games/' + gamedId
+			url: apiBaseUrl + '/Games/' + gameId
 		}).then(function (response) {
-			console.log(response);
 			return response.data;
 		});
 	}

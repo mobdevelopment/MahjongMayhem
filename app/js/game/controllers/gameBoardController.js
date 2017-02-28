@@ -4,8 +4,9 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 	var self = this;
 	self.gameTemplates;
 	self.currentUser = authService.getUser();
-	self.tiles;
+	self.tiles = [];
 	self.gameId;
+	self.game = [];
 	// var socket;
 	selectedTiles = [];
 
@@ -15,9 +16,16 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 
 	init();
 
-	function getGameBoard(gameId) {
-		self.gameId = gameId
-		self.tiles = [];
+	function getGame() {
+		gameService.getGame(self.gameId)
+			.then(function successCallback(response) {
+				self.game = response;
+			}, function errorCallback(err) {
+				console.log("ERR:: " + err);
+			});
+	};
+
+	function getGameBoard() {
 		gameService.getGameBoard(self.gameId)
 			.then(function successCallback(response) {
 				angular.forEach(response, function (tile) {
@@ -26,7 +34,7 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
-			console.log(self.tiles);
+			// console.log(self.tiles);
 	};
 
 	/// Werkt niet nog niet. tegels die matchen of wholesuits moeten vrij liggen om te kunnen matchen
@@ -60,8 +68,8 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 
 	function init() {
 		self.gameId = $stateParams.id;
-		getGameBoard(self.gameId);
-
+		getGameBoard();
+		getGame();
 	}
 
 };
