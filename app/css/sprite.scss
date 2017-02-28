@@ -6,18 +6,26 @@ $tiles: ('Bamboo1', 'Bamboo2', 'Bamboo3', 'Bamboo4', 'Bamboo5', 'Bamboo6', 'Bamb
 		 'SeasonFall', 'SeasonSpring', 'SeasonSummer', 'SeasonWinter',
 		 'WindEast', 'WindNorth', 'WindSouth', 'WindWest');
 
-$tile-height: 480px;
+$tile-height: 96px;
+$tile-width: 70px;
+
+$board-width: 15;
+$board-height: 15;
+$board-depth: 10;
+
+.board {
+	width: $tile-width * $board-width;
+	height: $tile-height * $board-height;
+	position: relative;
+}
 
 .sprite {
 	&.tile {
-		width: 349px;
-		height: 480px;
+		width: $tile-width;
+		height: $tile-height;
 		position: absolute;
+		background-size: cover;
 		background-image: url(../img/spriteSD.png);
-
-		&.show {
-			position: relative;
-		}
 
 		&.selected {
         	opacity: .6; 
@@ -27,7 +35,26 @@ $tile-height: 480px;
 			$index: index($tiles, $tile) - 1;
 
 			&-#{$tile} {
-			  background-position: 0 #{-480*$index}px;
+			  background-position: 0 #{-96*$index}px;
+			}
+		}
+
+		@for $i from 1 through $board-width {
+			&[data-x="#{$i}"] {
+				margin-left: #{$i * ($tile-width / 2)};
+			}
+		}
+
+		@for $y from 1 through $board-height {
+			&[data-y="#{$y}"] {
+				margin-top: #{$y * ($tile-height / 2)};
+
+				@for $z from 1 through $board-depth {
+					&[data-z="#{$z}"] {
+						z-index: #{$z};
+						margin-top: #{($y * ($tile-height / 2)) - ($z * 8)};
+					}
+				}
 			}
 		}
 	}
