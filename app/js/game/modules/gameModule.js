@@ -10,7 +10,7 @@ var gameBoardController = require('../controllers/gameBoardController');
 
 
 // Directive's
-
+var tileDirective = require('../directives/tileDirective');
 
 // Service's
 var gameService = require('../services/gameService');
@@ -23,6 +23,7 @@ var gameRoute = require('../routes/gameRoute');
 gameModule.factory('gameFactory', gameFactory);
 gameModule.factory('gameService', ['$http', gameService]);
 gameModule.factory('gameSocket', gameSocket);
+gameModule.directive('tileDirective', tileDirective);
 gameModule.controller('gameController', gameController);
 gameModule.controller('gameBoardController', gameBoardController);
 gameModule.config(gameRoute);

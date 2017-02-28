@@ -1,0 +1,4 @@
+.sass-cache/*
+coverage/*
+dist/*
+node_modules/*

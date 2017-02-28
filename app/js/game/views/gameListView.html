@@ -43,6 +43,7 @@
 					<button ng-show="gameCon.canJoin(game)"  class="btn btn-warning" ng-click="gameCon.joinGame(game.id)">Join</button>
 					<button ng-show="gameCon.canPlay(game)"  class="btn btn-info"  ui-sref="game({id:game.id})">Open</button>
 					<button ng-show="gameCon.canStart(game)" class="btn btn-success" ng-click="gameCon.startGame(game.id)">Start</button>
+					<button ng-show="gameCon.canSpectate(game)" class="btn btn-info" ng-click="">(Spectate)</button>
 				</td>
 			</tr>
 		</tbody>
