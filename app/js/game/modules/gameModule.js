@@ -23,7 +23,7 @@ var gameRoute = require('../routes/gameRoute');
 gameModule.factory('gameFactory', gameFactory);
 gameModule.factory('gameService', ['$http', gameService]);
 gameModule.factory('gameSocket', gameSocket);
-gameModule.directive('tileDirective', tileDirective);
+gameModule.directive('tile', tileDirective);
 gameModule.controller('gameController', gameController);
 gameModule.controller('gameBoardController', gameBoardController);
 gameModule.config(gameRoute);

@@ -5,21 +5,22 @@
 
 Gameboard...
 
-	<div class="board">
-		<!-- <div class="sprite tile show tile-Bamboo1" data-x="2" data-y="1" data-z="1"></div>
-		<div class="sprite tile show tile-Bamboo2" data-x="4" data-y="1" data-z="1"></div>
-		<div class="sprite tile show tile-Bamboo3" data-x="2" data-y="3" data-z="1"></div>
-		<div class="sprite tile show tile-Bamboo4" data-x="4" data-y="3" data-z="1"></div>
-		<div class="sprite tile show tile-Bamboo5" data-x="3" data-y="3" data-z="2"></div> -->
-		<div class="sprite tile show tile-Bamboo1" data-x="1" data-y="1" data-z="1"></div>
-		<div class="sprite tile show tile-DragonWhite" data-x="1" data-y="4" data-z="1"></div>
-		<div class="sprite tile show tile-WindWest" data-x="4" data-y="1" data-z="1"></div>
+	<!-- <div class="board"> -->
+		<!-- <div class="sprite tile show tile-Bamboo1" data-x="2" data-y="1" data-z="1"></div> -->
+		<!-- <div class="sprite tile show tile-Bamboo2" data-x="4" data-y="1" data-z="1"></div> -->
+		<!-- <div class="sprite tile show tile-Bamboo3" data-x="2" data-y="3" data-z="1"></div> -->
+		<!-- <div class="sprite tile show tile-Bamboo4" data-x="4" data-y="3" data-z="1"></div> -->
+		<!-- <div class="sprite tile show tile-Bamboo5" data-x="3" data-y="3" data-z="2"></div> -->
+		<!-- <div class="sprite tile show tile-Bamboo9" data-x="1" data-y="1" data-z="1"></div> -->
+		<!-- <div class="sprite tile show tile-DragonWhite" data-x="1" data-y="4" data-z="1"></div> -->
+		<!-- <div class="sprite tile show tile-WindWest" data-x="4" data-y="1" data-z="1"></div> -->
 
-	</div>
-	<div class="gameBoard" ng-show="gameCon.game.state == 'playing'">
-		<div ng-repeat="tile in tiles">
+	<!-- </div> -->
+	<div class="board" ng-show="gameCon.game.state == 'playing'">
+		<!-- <div ng-repeat="tile in tiles">
 
-		</div>
+		</div> -->
+		<tile ng-repeat="tile in gameCon.tiles" model="tile"></tile>
 	</div>
 
 </div>

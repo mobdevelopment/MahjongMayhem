@@ -1,22 +1,22 @@
 $tiles: ('Bamboo1', 'Bamboo2', 'Bamboo3', 'Bamboo4', 'Bamboo5', 'Bamboo6', 'Bamboo7', 'Bamboo8', 'Bamboo9', 
 		 'Character1', 'Character2', 'Character3', 'Character4', 'Character5', 'Character6', 'Character7', 'Character8', 'Character9',
-		 'Stone1', 'Stone2', 'Stone3', 'Stone4', 'Stone5', 'Stone6', 'Stone7', 'Stone8', 'Stone9', 
+		 'Circle1', 'Circle2', 'Circle3', 'Circle4', 'Circle5', 'Circle6', 'Circle7', 'Circle8', 'Circle9', 
 		 'DragonGreen', 'DragonRed', 'DragonWhite', 
 		 'FlowerBamboo', 'FlowerChrysanthemum', 'FlowerOrchild', 'FlowerPlum',
 		 'SeasonFall', 'SeasonSpring', 'SeasonSummer', 'SeasonWinter',
 		 'WindEast', 'WindNorth', 'WindSouth', 'WindWest');
 
 /// changed the size of the sprite. the width is now 350px
-$tile-width: 70;
-$tile-height: 96;
+$tile-width: 35;	//9
+$tile-height: 48; //12
 
-$board-width: 20;
-$board-height: 30;
+$board-width: 30;
+$board-height: 20;
 $board-depth: 10;
 
 .board {
-	width: #{$tile-width * $board-width}px;
-	height: #{$tile-height * $board-height}px;
+	width: #{($tile-width * $board-width) / 2}px;
+	height: #{($tile-height * $board-height) / 2}px;
 
 	position: relative;
 }
