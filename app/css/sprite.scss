@@ -41,9 +41,16 @@ $board-depth: 10;
 			}
 		}
 
-		@for $i from 1 through $board-width {
-			&[data-x="#{$i}"] {
-				margin-left: #{$i * ($tile-width / 2)};
+		@for $x from 1 through $board-width {
+			&[data-x="#{$x}"] {
+				margin-left: #{$x * ($tile-width / 2)};
+
+				@for $z from 1 through $board-depth {
+					&[data-z="#{$z}"] {
+						z-index: #{$z};
+						margin-left: #{($x * ($tile-width / 2)) + ($z * 4)};
+					}
+				}
 			}
 		}
 
@@ -54,7 +61,7 @@ $board-depth: 10;
 				@for $z from 1 through $board-depth {
 					&[data-z="#{$z}"] {
 						z-index: #{$z};
-						margin-top: #{($y * ($tile-height / 2)) - ($z * 8)};
+						margin-top: #{($y * ($tile-height / 2)) - ($z * 4)};
 					}
 				}
 			}
