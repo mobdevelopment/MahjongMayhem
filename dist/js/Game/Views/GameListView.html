@@ -18,7 +18,7 @@
 		<button type="button" class="btn btn-primary" ng-click="myFilter={state:'finished'}">Finished</button>
 	</div>
 	<div class="btn-group" role="group">
-		<button type="button" class="btn btn-primary" ng-show="gameCon.currentUser.username != undefined"  ng-click="myFilter={players: {_id: gameCon.currentUser.username}}">MyGames ({{ gameCon.currentUser.username }})</button>
+		<button type="button" class="btn btn-primary" ng-show="gameCon.currentUser.username != undefined"  ng-click="myFilter={players: {_id: gameCon.currentUser.username}}">My Games</button>
 	</div>
 
 	<table class="table table-striped">
@@ -43,6 +43,7 @@
 					<button ng-show="gameCon.canJoin(game)"  class="btn btn-warning" ng-click="gameCon.joinGame(game.id)">Join</button>
 					<button ng-show="gameCon.canPlay(game)"  class="btn btn-info"  ui-sref="game({id:game.id})">Open</button>
 					<button ng-show="gameCon.canStart(game)" class="btn btn-success" ng-click="gameCon.startGame(game.id)">Start</button>
+					<button ng-show="gameCon.canSpectate(game)" class="btn btn-info" ng-click="">(Spectate)</button>
 				</td>
 			</tr>
 		</tbody>
