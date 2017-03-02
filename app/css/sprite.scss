@@ -7,12 +7,13 @@ $tiles: ('Bamboo1', 'Bamboo2', 'Bamboo3', 'Bamboo4', 'Bamboo5', 'Bamboo6', 'Bamb
 		 'WindEast', 'WindNorth', 'WindSouth', 'WindWest');
 
 /// changed the size of the sprite. the width is now 350px
-$tile-width: 35;	//9
-$tile-height: 48; //12
+$tile-width: 35;	/// 10% of original (350) //9 = other possible size
+$tile-height: 48; 	/// 10% of original (480) //12 = other possible size
+$tile-side: 2;		/// 05% of original (42)
 
-$board-width: 30;
-$board-height: 20;
-$board-depth: 10;
+$board-width: 30;	/// ranging 1 ~ 29  // can be more or less depending on the template
+$board-height: 20;	/// ranging 1 ~ 15  // can be more or less depending on the template
+$board-depth: 10; 	/// ranging 0 ~ 3 	// can be more or less depending on the template
 
 .board {
 	width: #{($tile-width * $board-width) / 2}px;
@@ -43,12 +44,12 @@ $board-depth: 10;
 
 		@for $x from 1 through $board-width {
 			&[data-x="#{$x}"] {
-				margin-left: #{$x * ($tile-width / 2)};
+				margin-left: #{$x * ($tile-width / 2) - (($x - 1) * $tile-side)};
 
 				@for $z from 1 through $board-depth {
 					&[data-z="#{$z}"] {
-						z-index: #{$z};
-						margin-left: #{($x * ($tile-width / 2)) + ($z * 4)};
+						// z-index: #{$z}; /// ($z + 10000) + ($board-width - $x)
+						margin-left: #{($x * ($tile-width / 2)) + ($z * 4) - (($x - 1) * $tile-side)};
 					}
 				}
 			}
@@ -56,30 +57,15 @@ $board-depth: 10;
 
 		@for $y from 1 through $board-height {
 			&[data-y="#{$y}"] {
-				margin-top: #{$y * ($tile-height / 2)};
+				margin-top: #{$y * ($tile-height / 2) - (($y - 1) * $tile-side)};
 
 				@for $z from 1 through $board-depth {
 					&[data-z="#{$z}"] {
-						z-index: #{$z};
-						margin-top: #{($y * ($tile-height / 2)) - ($z * 4)};
+						// z-index: #{$z};	/// ($z + 10000) + (100 * $y)
+						margin-top: #{($y * ($tile-height / 2)) - ($z * 4)  - (($y - 1) * $tile-side)};
 					}
 				}
 			}
 		}
-	}
-}
-
-._tile {
-	width: 349px;
-	height: 480px;
-	position: absolute;
-	background-image: url(../img/_tile.png);
-
-	&.show {
-		position: relative;
-	}
-
-	&.selected {
-		opacity: .6; 
 	}
 }

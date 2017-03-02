@@ -143,965 +143,1652 @@
 .sprite.tile[data-x="1"] {
   margin-left: 17.5;
 }
+.sprite.tile[data-x="1"][data-z="1"] {
+  margin-left: 21.5;
+}
+.sprite.tile[data-x="1"][data-z="2"] {
+  margin-left: 25.5;
+}
+.sprite.tile[data-x="1"][data-z="3"] {
+  margin-left: 29.5;
+}
+.sprite.tile[data-x="1"][data-z="4"] {
+  margin-left: 33.5;
+}
+.sprite.tile[data-x="1"][data-z="5"] {
+  margin-left: 37.5;
+}
+.sprite.tile[data-x="1"][data-z="6"] {
+  margin-left: 41.5;
+}
+.sprite.tile[data-x="1"][data-z="7"] {
+  margin-left: 45.5;
+}
+.sprite.tile[data-x="1"][data-z="8"] {
+  margin-left: 49.5;
+}
+.sprite.tile[data-x="1"][data-z="9"] {
+  margin-left: 53.5;
+}
+.sprite.tile[data-x="1"][data-z="10"] {
+  margin-left: 57.5;
+}
 .sprite.tile[data-x="2"] {
-  margin-left: 35;
+  margin-left: 33;
+}
+.sprite.tile[data-x="2"][data-z="1"] {
+  margin-left: 37;
+}
+.sprite.tile[data-x="2"][data-z="2"] {
+  margin-left: 41;
+}
+.sprite.tile[data-x="2"][data-z="3"] {
+  margin-left: 45;
+}
+.sprite.tile[data-x="2"][data-z="4"] {
+  margin-left: 49;
+}
+.sprite.tile[data-x="2"][data-z="5"] {
+  margin-left: 53;
+}
+.sprite.tile[data-x="2"][data-z="6"] {
+  margin-left: 57;
+}
+.sprite.tile[data-x="2"][data-z="7"] {
+  margin-left: 61;
+}
+.sprite.tile[data-x="2"][data-z="8"] {
+  margin-left: 65;
+}
+.sprite.tile[data-x="2"][data-z="9"] {
+  margin-left: 69;
+}
+.sprite.tile[data-x="2"][data-z="10"] {
+  margin-left: 73;
 }
 .sprite.tile[data-x="3"] {
+  margin-left: 48.5;
+}
+.sprite.tile[data-x="3"][data-z="1"] {
   margin-left: 52.5;
 }
+.sprite.tile[data-x="3"][data-z="2"] {
+  margin-left: 56.5;
+}
+.sprite.tile[data-x="3"][data-z="3"] {
+  margin-left: 60.5;
+}
+.sprite.tile[data-x="3"][data-z="4"] {
+  margin-left: 64.5;
+}
+.sprite.tile[data-x="3"][data-z="5"] {
+  margin-left: 68.5;
+}
+.sprite.tile[data-x="3"][data-z="6"] {
+  margin-left: 72.5;
+}
+.sprite.tile[data-x="3"][data-z="7"] {
+  margin-left: 76.5;
+}
+.sprite.tile[data-x="3"][data-z="8"] {
+  margin-left: 80.5;
+}
+.sprite.tile[data-x="3"][data-z="9"] {
+  margin-left: 84.5;
+}
+.sprite.tile[data-x="3"][data-z="10"] {
+  margin-left: 88.5;
+}
 .sprite.tile[data-x="4"] {
-  margin-left: 70;
+  margin-left: 64;
+}
+.sprite.tile[data-x="4"][data-z="1"] {
+  margin-left: 68;
+}
+.sprite.tile[data-x="4"][data-z="2"] {
+  margin-left: 72;
+}
+.sprite.tile[data-x="4"][data-z="3"] {
+  margin-left: 76;
+}
+.sprite.tile[data-x="4"][data-z="4"] {
+  margin-left: 80;
+}
+.sprite.tile[data-x="4"][data-z="5"] {
+  margin-left: 84;
+}
+.sprite.tile[data-x="4"][data-z="6"] {
+  margin-left: 88;
+}
+.sprite.tile[data-x="4"][data-z="7"] {
+  margin-left: 92;
+}
+.sprite.tile[data-x="4"][data-z="8"] {
+  margin-left: 96;
+}
+.sprite.tile[data-x="4"][data-z="9"] {
+  margin-left: 100;
+}
+.sprite.tile[data-x="4"][data-z="10"] {
+  margin-left: 104;
 }
 .sprite.tile[data-x="5"] {
+  margin-left: 79.5;
+}
+.sprite.tile[data-x="5"][data-z="1"] {
+  margin-left: 83.5;
+}
+.sprite.tile[data-x="5"][data-z="2"] {
   margin-left: 87.5;
 }
+.sprite.tile[data-x="5"][data-z="3"] {
+  margin-left: 91.5;
+}
+.sprite.tile[data-x="5"][data-z="4"] {
+  margin-left: 95.5;
+}
+.sprite.tile[data-x="5"][data-z="5"] {
+  margin-left: 99.5;
+}
+.sprite.tile[data-x="5"][data-z="6"] {
+  margin-left: 103.5;
+}
+.sprite.tile[data-x="5"][data-z="7"] {
+  margin-left: 107.5;
+}
+.sprite.tile[data-x="5"][data-z="8"] {
+  margin-left: 111.5;
+}
+.sprite.tile[data-x="5"][data-z="9"] {
+  margin-left: 115.5;
+}
+.sprite.tile[data-x="5"][data-z="10"] {
+  margin-left: 119.5;
+}
 .sprite.tile[data-x="6"] {
-  margin-left: 105;
+  margin-left: 95;
+}
+.sprite.tile[data-x="6"][data-z="1"] {
+  margin-left: 99;
+}
+.sprite.tile[data-x="6"][data-z="2"] {
+  margin-left: 103;
+}
+.sprite.tile[data-x="6"][data-z="3"] {
+  margin-left: 107;
+}
+.sprite.tile[data-x="6"][data-z="4"] {
+  margin-left: 111;
+}
+.sprite.tile[data-x="6"][data-z="5"] {
+  margin-left: 115;
+}
+.sprite.tile[data-x="6"][data-z="6"] {
+  margin-left: 119;
+}
+.sprite.tile[data-x="6"][data-z="7"] {
+  margin-left: 123;
+}
+.sprite.tile[data-x="6"][data-z="8"] {
+  margin-left: 127;
+}
+.sprite.tile[data-x="6"][data-z="9"] {
+  margin-left: 131;
+}
+.sprite.tile[data-x="6"][data-z="10"] {
+  margin-left: 135;
 }
 .sprite.tile[data-x="7"] {
+  margin-left: 110.5;
+}
+.sprite.tile[data-x="7"][data-z="1"] {
+  margin-left: 114.5;
+}
+.sprite.tile[data-x="7"][data-z="2"] {
+  margin-left: 118.5;
+}
+.sprite.tile[data-x="7"][data-z="3"] {
   margin-left: 122.5;
 }
+.sprite.tile[data-x="7"][data-z="4"] {
+  margin-left: 126.5;
+}
+.sprite.tile[data-x="7"][data-z="5"] {
+  margin-left: 130.5;
+}
+.sprite.tile[data-x="7"][data-z="6"] {
+  margin-left: 134.5;
+}
+.sprite.tile[data-x="7"][data-z="7"] {
+  margin-left: 138.5;
+}
+.sprite.tile[data-x="7"][data-z="8"] {
+  margin-left: 142.5;
+}
+.sprite.tile[data-x="7"][data-z="9"] {
+  margin-left: 146.5;
+}
+.sprite.tile[data-x="7"][data-z="10"] {
+  margin-left: 150.5;
+}
 .sprite.tile[data-x="8"] {
-  margin-left: 140;
+  margin-left: 126;
+}
+.sprite.tile[data-x="8"][data-z="1"] {
+  margin-left: 130;
+}
+.sprite.tile[data-x="8"][data-z="2"] {
+  margin-left: 134;
+}
+.sprite.tile[data-x="8"][data-z="3"] {
+  margin-left: 138;
+}
+.sprite.tile[data-x="8"][data-z="4"] {
+  margin-left: 142;
+}
+.sprite.tile[data-x="8"][data-z="5"] {
+  margin-left: 146;
+}
+.sprite.tile[data-x="8"][data-z="6"] {
+  margin-left: 150;
+}
+.sprite.tile[data-x="8"][data-z="7"] {
+  margin-left: 154;
+}
+.sprite.tile[data-x="8"][data-z="8"] {
+  margin-left: 158;
+}
+.sprite.tile[data-x="8"][data-z="9"] {
+  margin-left: 162;
+}
+.sprite.tile[data-x="8"][data-z="10"] {
+  margin-left: 166;
 }
 .sprite.tile[data-x="9"] {
+  margin-left: 141.5;
+}
+.sprite.tile[data-x="9"][data-z="1"] {
+  margin-left: 145.5;
+}
+.sprite.tile[data-x="9"][data-z="2"] {
+  margin-left: 149.5;
+}
+.sprite.tile[data-x="9"][data-z="3"] {
+  margin-left: 153.5;
+}
+.sprite.tile[data-x="9"][data-z="4"] {
   margin-left: 157.5;
 }
+.sprite.tile[data-x="9"][data-z="5"] {
+  margin-left: 161.5;
+}
+.sprite.tile[data-x="9"][data-z="6"] {
+  margin-left: 165.5;
+}
+.sprite.tile[data-x="9"][data-z="7"] {
+  margin-left: 169.5;
+}
+.sprite.tile[data-x="9"][data-z="8"] {
+  margin-left: 173.5;
+}
+.sprite.tile[data-x="9"][data-z="9"] {
+  margin-left: 177.5;
+}
+.sprite.tile[data-x="9"][data-z="10"] {
+  margin-left: 181.5;
+}
 .sprite.tile[data-x="10"] {
-  margin-left: 175;
+  margin-left: 157;
+}
+.sprite.tile[data-x="10"][data-z="1"] {
+  margin-left: 161;
+}
+.sprite.tile[data-x="10"][data-z="2"] {
+  margin-left: 165;
+}
+.sprite.tile[data-x="10"][data-z="3"] {
+  margin-left: 169;
+}
+.sprite.tile[data-x="10"][data-z="4"] {
+  margin-left: 173;
+}
+.sprite.tile[data-x="10"][data-z="5"] {
+  margin-left: 177;
+}
+.sprite.tile[data-x="10"][data-z="6"] {
+  margin-left: 181;
+}
+.sprite.tile[data-x="10"][data-z="7"] {
+  margin-left: 185;
+}
+.sprite.tile[data-x="10"][data-z="8"] {
+  margin-left: 189;
+}
+.sprite.tile[data-x="10"][data-z="9"] {
+  margin-left: 193;
+}
+.sprite.tile[data-x="10"][data-z="10"] {
+  margin-left: 197;
 }
 .sprite.tile[data-x="11"] {
+  margin-left: 172.5;
+}
+.sprite.tile[data-x="11"][data-z="1"] {
+  margin-left: 176.5;
+}
+.sprite.tile[data-x="11"][data-z="2"] {
+  margin-left: 180.5;
+}
+.sprite.tile[data-x="11"][data-z="3"] {
+  margin-left: 184.5;
+}
+.sprite.tile[data-x="11"][data-z="4"] {
+  margin-left: 188.5;
+}
+.sprite.tile[data-x="11"][data-z="5"] {
   margin-left: 192.5;
 }
+.sprite.tile[data-x="11"][data-z="6"] {
+  margin-left: 196.5;
+}
+.sprite.tile[data-x="11"][data-z="7"] {
+  margin-left: 200.5;
+}
+.sprite.tile[data-x="11"][data-z="8"] {
+  margin-left: 204.5;
+}
+.sprite.tile[data-x="11"][data-z="9"] {
+  margin-left: 208.5;
+}
+.sprite.tile[data-x="11"][data-z="10"] {
+  margin-left: 212.5;
+}
 .sprite.tile[data-x="12"] {
-  margin-left: 210;
+  margin-left: 188;
+}
+.sprite.tile[data-x="12"][data-z="1"] {
+  margin-left: 192;
+}
+.sprite.tile[data-x="12"][data-z="2"] {
+  margin-left: 196;
+}
+.sprite.tile[data-x="12"][data-z="3"] {
+  margin-left: 200;
+}
+.sprite.tile[data-x="12"][data-z="4"] {
+  margin-left: 204;
+}
+.sprite.tile[data-x="12"][data-z="5"] {
+  margin-left: 208;
+}
+.sprite.tile[data-x="12"][data-z="6"] {
+  margin-left: 212;
+}
+.sprite.tile[data-x="12"][data-z="7"] {
+  margin-left: 216;
+}
+.sprite.tile[data-x="12"][data-z="8"] {
+  margin-left: 220;
+}
+.sprite.tile[data-x="12"][data-z="9"] {
+  margin-left: 224;
+}
+.sprite.tile[data-x="12"][data-z="10"] {
+  margin-left: 228;
 }
 .sprite.tile[data-x="13"] {
+  margin-left: 203.5;
+}
+.sprite.tile[data-x="13"][data-z="1"] {
+  margin-left: 207.5;
+}
+.sprite.tile[data-x="13"][data-z="2"] {
+  margin-left: 211.5;
+}
+.sprite.tile[data-x="13"][data-z="3"] {
+  margin-left: 215.5;
+}
+.sprite.tile[data-x="13"][data-z="4"] {
+  margin-left: 219.5;
+}
+.sprite.tile[data-x="13"][data-z="5"] {
+  margin-left: 223.5;
+}
+.sprite.tile[data-x="13"][data-z="6"] {
   margin-left: 227.5;
 }
+.sprite.tile[data-x="13"][data-z="7"] {
+  margin-left: 231.5;
+}
+.sprite.tile[data-x="13"][data-z="8"] {
+  margin-left: 235.5;
+}
+.sprite.tile[data-x="13"][data-z="9"] {
+  margin-left: 239.5;
+}
+.sprite.tile[data-x="13"][data-z="10"] {
+  margin-left: 243.5;
+}
 .sprite.tile[data-x="14"] {
-  margin-left: 245;
+  margin-left: 219;
+}
+.sprite.tile[data-x="14"][data-z="1"] {
+  margin-left: 223;
+}
+.sprite.tile[data-x="14"][data-z="2"] {
+  margin-left: 227;
+}
+.sprite.tile[data-x="14"][data-z="3"] {
+  margin-left: 231;
+}
+.sprite.tile[data-x="14"][data-z="4"] {
+  margin-left: 235;
+}
+.sprite.tile[data-x="14"][data-z="5"] {
+  margin-left: 239;
+}
+.sprite.tile[data-x="14"][data-z="6"] {
+  margin-left: 243;
+}
+.sprite.tile[data-x="14"][data-z="7"] {
+  margin-left: 247;
+}
+.sprite.tile[data-x="14"][data-z="8"] {
+  margin-left: 251;
+}
+.sprite.tile[data-x="14"][data-z="9"] {
+  margin-left: 255;
+}
+.sprite.tile[data-x="14"][data-z="10"] {
+  margin-left: 259;
 }
 .sprite.tile[data-x="15"] {
+  margin-left: 234.5;
+}
+.sprite.tile[data-x="15"][data-z="1"] {
+  margin-left: 238.5;
+}
+.sprite.tile[data-x="15"][data-z="2"] {
+  margin-left: 242.5;
+}
+.sprite.tile[data-x="15"][data-z="3"] {
+  margin-left: 246.5;
+}
+.sprite.tile[data-x="15"][data-z="4"] {
+  margin-left: 250.5;
+}
+.sprite.tile[data-x="15"][data-z="5"] {
+  margin-left: 254.5;
+}
+.sprite.tile[data-x="15"][data-z="6"] {
+  margin-left: 258.5;
+}
+.sprite.tile[data-x="15"][data-z="7"] {
   margin-left: 262.5;
 }
+.sprite.tile[data-x="15"][data-z="8"] {
+  margin-left: 266.5;
+}
+.sprite.tile[data-x="15"][data-z="9"] {
+  margin-left: 270.5;
+}
+.sprite.tile[data-x="15"][data-z="10"] {
+  margin-left: 274.5;
+}
 .sprite.tile[data-x="16"] {
-  margin-left: 280;
+  margin-left: 250;
+}
+.sprite.tile[data-x="16"][data-z="1"] {
+  margin-left: 254;
+}
+.sprite.tile[data-x="16"][data-z="2"] {
+  margin-left: 258;
+}
+.sprite.tile[data-x="16"][data-z="3"] {
+  margin-left: 262;
+}
+.sprite.tile[data-x="16"][data-z="4"] {
+  margin-left: 266;
+}
+.sprite.tile[data-x="16"][data-z="5"] {
+  margin-left: 270;
+}
+.sprite.tile[data-x="16"][data-z="6"] {
+  margin-left: 274;
+}
+.sprite.tile[data-x="16"][data-z="7"] {
+  margin-left: 278;
+}
+.sprite.tile[data-x="16"][data-z="8"] {
+  margin-left: 282;
+}
+.sprite.tile[data-x="16"][data-z="9"] {
+  margin-left: 286;
+}
+.sprite.tile[data-x="16"][data-z="10"] {
+  margin-left: 290;
 }
 .sprite.tile[data-x="17"] {
+  margin-left: 265.5;
+}
+.sprite.tile[data-x="17"][data-z="1"] {
+  margin-left: 269.5;
+}
+.sprite.tile[data-x="17"][data-z="2"] {
+  margin-left: 273.5;
+}
+.sprite.tile[data-x="17"][data-z="3"] {
+  margin-left: 277.5;
+}
+.sprite.tile[data-x="17"][data-z="4"] {
+  margin-left: 281.5;
+}
+.sprite.tile[data-x="17"][data-z="5"] {
+  margin-left: 285.5;
+}
+.sprite.tile[data-x="17"][data-z="6"] {
+  margin-left: 289.5;
+}
+.sprite.tile[data-x="17"][data-z="7"] {
+  margin-left: 293.5;
+}
+.sprite.tile[data-x="17"][data-z="8"] {
   margin-left: 297.5;
 }
+.sprite.tile[data-x="17"][data-z="9"] {
+  margin-left: 301.5;
+}
+.sprite.tile[data-x="17"][data-z="10"] {
+  margin-left: 305.5;
+}
 .sprite.tile[data-x="18"] {
-  margin-left: 315;
+  margin-left: 281;
+}
+.sprite.tile[data-x="18"][data-z="1"] {
+  margin-left: 285;
+}
+.sprite.tile[data-x="18"][data-z="2"] {
+  margin-left: 289;
+}
+.sprite.tile[data-x="18"][data-z="3"] {
+  margin-left: 293;
+}
+.sprite.tile[data-x="18"][data-z="4"] {
+  margin-left: 297;
+}
+.sprite.tile[data-x="18"][data-z="5"] {
+  margin-left: 301;
+}
+.sprite.tile[data-x="18"][data-z="6"] {
+  margin-left: 305;
+}
+.sprite.tile[data-x="18"][data-z="7"] {
+  margin-left: 309;
+}
+.sprite.tile[data-x="18"][data-z="8"] {
+  margin-left: 313;
+}
+.sprite.tile[data-x="18"][data-z="9"] {
+  margin-left: 317;
+}
+.sprite.tile[data-x="18"][data-z="10"] {
+  margin-left: 321;
 }
 .sprite.tile[data-x="19"] {
+  margin-left: 296.5;
+}
+.sprite.tile[data-x="19"][data-z="1"] {
+  margin-left: 300.5;
+}
+.sprite.tile[data-x="19"][data-z="2"] {
+  margin-left: 304.5;
+}
+.sprite.tile[data-x="19"][data-z="3"] {
+  margin-left: 308.5;
+}
+.sprite.tile[data-x="19"][data-z="4"] {
+  margin-left: 312.5;
+}
+.sprite.tile[data-x="19"][data-z="5"] {
+  margin-left: 316.5;
+}
+.sprite.tile[data-x="19"][data-z="6"] {
+  margin-left: 320.5;
+}
+.sprite.tile[data-x="19"][data-z="7"] {
+  margin-left: 324.5;
+}
+.sprite.tile[data-x="19"][data-z="8"] {
+  margin-left: 328.5;
+}
+.sprite.tile[data-x="19"][data-z="9"] {
   margin-left: 332.5;
 }
+.sprite.tile[data-x="19"][data-z="10"] {
+  margin-left: 336.5;
+}
 .sprite.tile[data-x="20"] {
-  margin-left: 350;
+  margin-left: 312;
+}
+.sprite.tile[data-x="20"][data-z="1"] {
+  margin-left: 316;
+}
+.sprite.tile[data-x="20"][data-z="2"] {
+  margin-left: 320;
+}
+.sprite.tile[data-x="20"][data-z="3"] {
+  margin-left: 324;
+}
+.sprite.tile[data-x="20"][data-z="4"] {
+  margin-left: 328;
+}
+.sprite.tile[data-x="20"][data-z="5"] {
+  margin-left: 332;
+}
+.sprite.tile[data-x="20"][data-z="6"] {
+  margin-left: 336;
+}
+.sprite.tile[data-x="20"][data-z="7"] {
+  margin-left: 340;
+}
+.sprite.tile[data-x="20"][data-z="8"] {
+  margin-left: 344;
+}
+.sprite.tile[data-x="20"][data-z="9"] {
+  margin-left: 348;
+}
+.sprite.tile[data-x="20"][data-z="10"] {
+  margin-left: 352;
 }
 .sprite.tile[data-x="21"] {
+  margin-left: 327.5;
+}
+.sprite.tile[data-x="21"][data-z="1"] {
+  margin-left: 331.5;
+}
+.sprite.tile[data-x="21"][data-z="2"] {
+  margin-left: 335.5;
+}
+.sprite.tile[data-x="21"][data-z="3"] {
+  margin-left: 339.5;
+}
+.sprite.tile[data-x="21"][data-z="4"] {
+  margin-left: 343.5;
+}
+.sprite.tile[data-x="21"][data-z="5"] {
+  margin-left: 347.5;
+}
+.sprite.tile[data-x="21"][data-z="6"] {
+  margin-left: 351.5;
+}
+.sprite.tile[data-x="21"][data-z="7"] {
+  margin-left: 355.5;
+}
+.sprite.tile[data-x="21"][data-z="8"] {
+  margin-left: 359.5;
+}
+.sprite.tile[data-x="21"][data-z="9"] {
+  margin-left: 363.5;
+}
+.sprite.tile[data-x="21"][data-z="10"] {
   margin-left: 367.5;
 }
 .sprite.tile[data-x="22"] {
-  margin-left: 385;
+  margin-left: 343;
+}
+.sprite.tile[data-x="22"][data-z="1"] {
+  margin-left: 347;
+}
+.sprite.tile[data-x="22"][data-z="2"] {
+  margin-left: 351;
+}
+.sprite.tile[data-x="22"][data-z="3"] {
+  margin-left: 355;
+}
+.sprite.tile[data-x="22"][data-z="4"] {
+  margin-left: 359;
+}
+.sprite.tile[data-x="22"][data-z="5"] {
+  margin-left: 363;
+}
+.sprite.tile[data-x="22"][data-z="6"] {
+  margin-left: 367;
+}
+.sprite.tile[data-x="22"][data-z="7"] {
+  margin-left: 371;
+}
+.sprite.tile[data-x="22"][data-z="8"] {
+  margin-left: 375;
+}
+.sprite.tile[data-x="22"][data-z="9"] {
+  margin-left: 379;
+}
+.sprite.tile[data-x="22"][data-z="10"] {
+  margin-left: 383;
 }
 .sprite.tile[data-x="23"] {
-  margin-left: 402.5;
+  margin-left: 358.5;
+}
+.sprite.tile[data-x="23"][data-z="1"] {
+  margin-left: 362.5;
+}
+.sprite.tile[data-x="23"][data-z="2"] {
+  margin-left: 366.5;
+}
+.sprite.tile[data-x="23"][data-z="3"] {
+  margin-left: 370.5;
+}
+.sprite.tile[data-x="23"][data-z="4"] {
+  margin-left: 374.5;
+}
+.sprite.tile[data-x="23"][data-z="5"] {
+  margin-left: 378.5;
+}
+.sprite.tile[data-x="23"][data-z="6"] {
+  margin-left: 382.5;
+}
+.sprite.tile[data-x="23"][data-z="7"] {
+  margin-left: 386.5;
+}
+.sprite.tile[data-x="23"][data-z="8"] {
+  margin-left: 390.5;
+}
+.sprite.tile[data-x="23"][data-z="9"] {
+  margin-left: 394.5;
+}
+.sprite.tile[data-x="23"][data-z="10"] {
+  margin-left: 398.5;
 }
 .sprite.tile[data-x="24"] {
-  margin-left: 420;
+  margin-left: 374;
+}
+.sprite.tile[data-x="24"][data-z="1"] {
+  margin-left: 378;
+}
+.sprite.tile[data-x="24"][data-z="2"] {
+  margin-left: 382;
+}
+.sprite.tile[data-x="24"][data-z="3"] {
+  margin-left: 386;
+}
+.sprite.tile[data-x="24"][data-z="4"] {
+  margin-left: 390;
+}
+.sprite.tile[data-x="24"][data-z="5"] {
+  margin-left: 394;
+}
+.sprite.tile[data-x="24"][data-z="6"] {
+  margin-left: 398;
+}
+.sprite.tile[data-x="24"][data-z="7"] {
+  margin-left: 402;
+}
+.sprite.tile[data-x="24"][data-z="8"] {
+  margin-left: 406;
+}
+.sprite.tile[data-x="24"][data-z="9"] {
+  margin-left: 410;
+}
+.sprite.tile[data-x="24"][data-z="10"] {
+  margin-left: 414;
 }
 .sprite.tile[data-x="25"] {
-  margin-left: 437.5;
+  margin-left: 389.5;
+}
+.sprite.tile[data-x="25"][data-z="1"] {
+  margin-left: 393.5;
+}
+.sprite.tile[data-x="25"][data-z="2"] {
+  margin-left: 397.5;
+}
+.sprite.tile[data-x="25"][data-z="3"] {
+  margin-left: 401.5;
+}
+.sprite.tile[data-x="25"][data-z="4"] {
+  margin-left: 405.5;
+}
+.sprite.tile[data-x="25"][data-z="5"] {
+  margin-left: 409.5;
+}
+.sprite.tile[data-x="25"][data-z="6"] {
+  margin-left: 413.5;
+}
+.sprite.tile[data-x="25"][data-z="7"] {
+  margin-left: 417.5;
+}
+.sprite.tile[data-x="25"][data-z="8"] {
+  margin-left: 421.5;
+}
+.sprite.tile[data-x="25"][data-z="9"] {
+  margin-left: 425.5;
+}
+.sprite.tile[data-x="25"][data-z="10"] {
+  margin-left: 429.5;
 }
 .sprite.tile[data-x="26"] {
-  margin-left: 455;
+  margin-left: 405;
+}
+.sprite.tile[data-x="26"][data-z="1"] {
+  margin-left: 409;
+}
+.sprite.tile[data-x="26"][data-z="2"] {
+  margin-left: 413;
+}
+.sprite.tile[data-x="26"][data-z="3"] {
+  margin-left: 417;
+}
+.sprite.tile[data-x="26"][data-z="4"] {
+  margin-left: 421;
+}
+.sprite.tile[data-x="26"][data-z="5"] {
+  margin-left: 425;
+}
+.sprite.tile[data-x="26"][data-z="6"] {
+  margin-left: 429;
+}
+.sprite.tile[data-x="26"][data-z="7"] {
+  margin-left: 433;
+}
+.sprite.tile[data-x="26"][data-z="8"] {
+  margin-left: 437;
+}
+.sprite.tile[data-x="26"][data-z="9"] {
+  margin-left: 441;
+}
+.sprite.tile[data-x="26"][data-z="10"] {
+  margin-left: 445;
 }
 .sprite.tile[data-x="27"] {
-  margin-left: 472.5;
+  margin-left: 420.5;
+}
+.sprite.tile[data-x="27"][data-z="1"] {
+  margin-left: 424.5;
+}
+.sprite.tile[data-x="27"][data-z="2"] {
+  margin-left: 428.5;
+}
+.sprite.tile[data-x="27"][data-z="3"] {
+  margin-left: 432.5;
+}
+.sprite.tile[data-x="27"][data-z="4"] {
+  margin-left: 436.5;
+}
+.sprite.tile[data-x="27"][data-z="5"] {
+  margin-left: 440.5;
+}
+.sprite.tile[data-x="27"][data-z="6"] {
+  margin-left: 444.5;
+}
+.sprite.tile[data-x="27"][data-z="7"] {
+  margin-left: 448.5;
+}
+.sprite.tile[data-x="27"][data-z="8"] {
+  margin-left: 452.5;
+}
+.sprite.tile[data-x="27"][data-z="9"] {
+  margin-left: 456.5;
+}
+.sprite.tile[data-x="27"][data-z="10"] {
+  margin-left: 460.5;
 }
 .sprite.tile[data-x="28"] {
-  margin-left: 490;
+  margin-left: 436;
+}
+.sprite.tile[data-x="28"][data-z="1"] {
+  margin-left: 440;
+}
+.sprite.tile[data-x="28"][data-z="2"] {
+  margin-left: 444;
+}
+.sprite.tile[data-x="28"][data-z="3"] {
+  margin-left: 448;
+}
+.sprite.tile[data-x="28"][data-z="4"] {
+  margin-left: 452;
+}
+.sprite.tile[data-x="28"][data-z="5"] {
+  margin-left: 456;
+}
+.sprite.tile[data-x="28"][data-z="6"] {
+  margin-left: 460;
+}
+.sprite.tile[data-x="28"][data-z="7"] {
+  margin-left: 464;
+}
+.sprite.tile[data-x="28"][data-z="8"] {
+  margin-left: 468;
+}
+.sprite.tile[data-x="28"][data-z="9"] {
+  margin-left: 472;
+}
+.sprite.tile[data-x="28"][data-z="10"] {
+  margin-left: 476;
 }
 .sprite.tile[data-x="29"] {
-  margin-left: 507.5;
+  margin-left: 451.5;
+}
+.sprite.tile[data-x="29"][data-z="1"] {
+  margin-left: 455.5;
+}
+.sprite.tile[data-x="29"][data-z="2"] {
+  margin-left: 459.5;
+}
+.sprite.tile[data-x="29"][data-z="3"] {
+  margin-left: 463.5;
+}
+.sprite.tile[data-x="29"][data-z="4"] {
+  margin-left: 467.5;
+}
+.sprite.tile[data-x="29"][data-z="5"] {
+  margin-left: 471.5;
+}
+.sprite.tile[data-x="29"][data-z="6"] {
+  margin-left: 475.5;
+}
+.sprite.tile[data-x="29"][data-z="7"] {
+  margin-left: 479.5;
+}
+.sprite.tile[data-x="29"][data-z="8"] {
+  margin-left: 483.5;
+}
+.sprite.tile[data-x="29"][data-z="9"] {
+  margin-left: 487.5;
+}
+.sprite.tile[data-x="29"][data-z="10"] {
+  margin-left: 491.5;
 }
 .sprite.tile[data-x="30"] {
-  margin-left: 525;
+  margin-left: 467;
+}
+.sprite.tile[data-x="30"][data-z="1"] {
+  margin-left: 471;
+}
+.sprite.tile[data-x="30"][data-z="2"] {
+  margin-left: 475;
+}
+.sprite.tile[data-x="30"][data-z="3"] {
+  margin-left: 479;
+}
+.sprite.tile[data-x="30"][data-z="4"] {
+  margin-left: 483;
+}
+.sprite.tile[data-x="30"][data-z="5"] {
+  margin-left: 487;
+}
+.sprite.tile[data-x="30"][data-z="6"] {
+  margin-left: 491;
+}
+.sprite.tile[data-x="30"][data-z="7"] {
+  margin-left: 495;
+}
+.sprite.tile[data-x="30"][data-z="8"] {
+  margin-left: 499;
+}
+.sprite.tile[data-x="30"][data-z="9"] {
+  margin-left: 503;
+}
+.sprite.tile[data-x="30"][data-z="10"] {
+  margin-left: 507;
 }
 .sprite.tile[data-y="1"] {
   margin-top: 24;
 }
 .sprite.tile[data-y="1"][data-z="1"] {
-  z-index: 1;
-  margin-top: 16;
+  margin-top: 20;
 }
 .sprite.tile[data-y="1"][data-z="2"] {
-  z-index: 2;
-  margin-top: 8;
-}
-.sprite.tile[data-y="1"][data-z="3"] {
-  z-index: 3;
-  margin-top: 0;
-}
-.sprite.tile[data-y="1"][data-z="4"] {
-  z-index: 4;
-  margin-top: -8;
-}
-.sprite.tile[data-y="1"][data-z="5"] {
-  z-index: 5;
-  margin-top: -16;
-}
-.sprite.tile[data-y="1"][data-z="6"] {
-  z-index: 6;
-  margin-top: -24;
-}
-.sprite.tile[data-y="1"][data-z="7"] {
-  z-index: 7;
-  margin-top: -32;
-}
-.sprite.tile[data-y="1"][data-z="8"] {
-  z-index: 8;
-  margin-top: -40;
-}
-.sprite.tile[data-y="1"][data-z="9"] {
-  z-index: 9;
-  margin-top: -48;
-}
-.sprite.tile[data-y="1"][data-z="10"] {
-  z-index: 10;
-  margin-top: -56;
-}
-.sprite.tile[data-y="2"] {
-  margin-top: 48;
-}
-.sprite.tile[data-y="2"][data-z="1"] {
-  z-index: 1;
-  margin-top: 40;
-}
-.sprite.tile[data-y="2"][data-z="2"] {
-  z-index: 2;
-  margin-top: 32;
-}
-.sprite.tile[data-y="2"][data-z="3"] {
-  z-index: 3;
-  margin-top: 24;
-}
-.sprite.tile[data-y="2"][data-z="4"] {
-  z-index: 4;
   margin-top: 16;
 }
-.sprite.tile[data-y="2"][data-z="5"] {
-  z-index: 5;
+.sprite.tile[data-y="1"][data-z="3"] {
+  margin-top: 12;
+}
+.sprite.tile[data-y="1"][data-z="4"] {
   margin-top: 8;
 }
-.sprite.tile[data-y="2"][data-z="6"] {
-  z-index: 6;
+.sprite.tile[data-y="1"][data-z="5"] {
+  margin-top: 4;
+}
+.sprite.tile[data-y="1"][data-z="6"] {
   margin-top: 0;
 }
-.sprite.tile[data-y="2"][data-z="7"] {
-  z-index: 7;
+.sprite.tile[data-y="1"][data-z="7"] {
+  margin-top: -4;
+}
+.sprite.tile[data-y="1"][data-z="8"] {
   margin-top: -8;
 }
-.sprite.tile[data-y="2"][data-z="8"] {
-  z-index: 8;
+.sprite.tile[data-y="1"][data-z="9"] {
+  margin-top: -12;
+}
+.sprite.tile[data-y="1"][data-z="10"] {
   margin-top: -16;
 }
+.sprite.tile[data-y="2"] {
+  margin-top: 46;
+}
+.sprite.tile[data-y="2"][data-z="1"] {
+  margin-top: 42;
+}
+.sprite.tile[data-y="2"][data-z="2"] {
+  margin-top: 38;
+}
+.sprite.tile[data-y="2"][data-z="3"] {
+  margin-top: 34;
+}
+.sprite.tile[data-y="2"][data-z="4"] {
+  margin-top: 30;
+}
+.sprite.tile[data-y="2"][data-z="5"] {
+  margin-top: 26;
+}
+.sprite.tile[data-y="2"][data-z="6"] {
+  margin-top: 22;
+}
+.sprite.tile[data-y="2"][data-z="7"] {
+  margin-top: 18;
+}
+.sprite.tile[data-y="2"][data-z="8"] {
+  margin-top: 14;
+}
 .sprite.tile[data-y="2"][data-z="9"] {
-  z-index: 9;
-  margin-top: -24;
+  margin-top: 10;
 }
 .sprite.tile[data-y="2"][data-z="10"] {
-  z-index: 10;
-  margin-top: -32;
+  margin-top: 6;
 }
 .sprite.tile[data-y="3"] {
-  margin-top: 72;
+  margin-top: 68;
 }
 .sprite.tile[data-y="3"][data-z="1"] {
-  z-index: 1;
   margin-top: 64;
 }
 .sprite.tile[data-y="3"][data-z="2"] {
-  z-index: 2;
-  margin-top: 56;
+  margin-top: 60;
 }
 .sprite.tile[data-y="3"][data-z="3"] {
-  z-index: 3;
-  margin-top: 48;
-}
-.sprite.tile[data-y="3"][data-z="4"] {
-  z-index: 4;
-  margin-top: 40;
-}
-.sprite.tile[data-y="3"][data-z="5"] {
-  z-index: 5;
-  margin-top: 32;
-}
-.sprite.tile[data-y="3"][data-z="6"] {
-  z-index: 6;
-  margin-top: 24;
-}
-.sprite.tile[data-y="3"][data-z="7"] {
-  z-index: 7;
-  margin-top: 16;
-}
-.sprite.tile[data-y="3"][data-z="8"] {
-  z-index: 8;
-  margin-top: 8;
-}
-.sprite.tile[data-y="3"][data-z="9"] {
-  z-index: 9;
-  margin-top: 0;
-}
-.sprite.tile[data-y="3"][data-z="10"] {
-  z-index: 10;
-  margin-top: -8;
-}
-.sprite.tile[data-y="4"] {
-  margin-top: 96;
-}
-.sprite.tile[data-y="4"][data-z="1"] {
-  z-index: 1;
-  margin-top: 88;
-}
-.sprite.tile[data-y="4"][data-z="2"] {
-  z-index: 2;
-  margin-top: 80;
-}
-.sprite.tile[data-y="4"][data-z="3"] {
-  z-index: 3;
-  margin-top: 72;
-}
-.sprite.tile[data-y="4"][data-z="4"] {
-  z-index: 4;
-  margin-top: 64;
-}
-.sprite.tile[data-y="4"][data-z="5"] {
-  z-index: 5;
   margin-top: 56;
 }
-.sprite.tile[data-y="4"][data-z="6"] {
-  z-index: 6;
+.sprite.tile[data-y="3"][data-z="4"] {
+  margin-top: 52;
+}
+.sprite.tile[data-y="3"][data-z="5"] {
   margin-top: 48;
 }
-.sprite.tile[data-y="4"][data-z="7"] {
-  z-index: 7;
+.sprite.tile[data-y="3"][data-z="6"] {
+  margin-top: 44;
+}
+.sprite.tile[data-y="3"][data-z="7"] {
   margin-top: 40;
 }
-.sprite.tile[data-y="4"][data-z="8"] {
-  z-index: 8;
+.sprite.tile[data-y="3"][data-z="8"] {
+  margin-top: 36;
+}
+.sprite.tile[data-y="3"][data-z="9"] {
   margin-top: 32;
 }
+.sprite.tile[data-y="3"][data-z="10"] {
+  margin-top: 28;
+}
+.sprite.tile[data-y="4"] {
+  margin-top: 90;
+}
+.sprite.tile[data-y="4"][data-z="1"] {
+  margin-top: 86;
+}
+.sprite.tile[data-y="4"][data-z="2"] {
+  margin-top: 82;
+}
+.sprite.tile[data-y="4"][data-z="3"] {
+  margin-top: 78;
+}
+.sprite.tile[data-y="4"][data-z="4"] {
+  margin-top: 74;
+}
+.sprite.tile[data-y="4"][data-z="5"] {
+  margin-top: 70;
+}
+.sprite.tile[data-y="4"][data-z="6"] {
+  margin-top: 66;
+}
+.sprite.tile[data-y="4"][data-z="7"] {
+  margin-top: 62;
+}
+.sprite.tile[data-y="4"][data-z="8"] {
+  margin-top: 58;
+}
 .sprite.tile[data-y="4"][data-z="9"] {
-  z-index: 9;
-  margin-top: 24;
+  margin-top: 54;
 }
 .sprite.tile[data-y="4"][data-z="10"] {
-  z-index: 10;
-  margin-top: 16;
+  margin-top: 50;
 }
 .sprite.tile[data-y="5"] {
-  margin-top: 120;
-}
-.sprite.tile[data-y="5"][data-z="1"] {
-  z-index: 1;
   margin-top: 112;
 }
+.sprite.tile[data-y="5"][data-z="1"] {
+  margin-top: 108;
+}
 .sprite.tile[data-y="5"][data-z="2"] {
-  z-index: 2;
   margin-top: 104;
 }
 .sprite.tile[data-y="5"][data-z="3"] {
-  z-index: 3;
-  margin-top: 96;
+  margin-top: 100;
 }
 .sprite.tile[data-y="5"][data-z="4"] {
-  z-index: 4;
-  margin-top: 88;
-}
-.sprite.tile[data-y="5"][data-z="5"] {
-  z-index: 5;
-  margin-top: 80;
-}
-.sprite.tile[data-y="5"][data-z="6"] {
-  z-index: 6;
-  margin-top: 72;
-}
-.sprite.tile[data-y="5"][data-z="7"] {
-  z-index: 7;
-  margin-top: 64;
-}
-.sprite.tile[data-y="5"][data-z="8"] {
-  z-index: 8;
-  margin-top: 56;
-}
-.sprite.tile[data-y="5"][data-z="9"] {
-  z-index: 9;
-  margin-top: 48;
-}
-.sprite.tile[data-y="5"][data-z="10"] {
-  z-index: 10;
-  margin-top: 40;
-}
-.sprite.tile[data-y="6"] {
-  margin-top: 144;
-}
-.sprite.tile[data-y="6"][data-z="1"] {
-  z-index: 1;
-  margin-top: 136;
-}
-.sprite.tile[data-y="6"][data-z="2"] {
-  z-index: 2;
-  margin-top: 128;
-}
-.sprite.tile[data-y="6"][data-z="3"] {
-  z-index: 3;
-  margin-top: 120;
-}
-.sprite.tile[data-y="6"][data-z="4"] {
-  z-index: 4;
-  margin-top: 112;
-}
-.sprite.tile[data-y="6"][data-z="5"] {
-  z-index: 5;
-  margin-top: 104;
-}
-.sprite.tile[data-y="6"][data-z="6"] {
-  z-index: 6;
   margin-top: 96;
 }
-.sprite.tile[data-y="6"][data-z="7"] {
-  z-index: 7;
+.sprite.tile[data-y="5"][data-z="5"] {
+  margin-top: 92;
+}
+.sprite.tile[data-y="5"][data-z="6"] {
   margin-top: 88;
 }
-.sprite.tile[data-y="6"][data-z="8"] {
-  z-index: 8;
+.sprite.tile[data-y="5"][data-z="7"] {
+  margin-top: 84;
+}
+.sprite.tile[data-y="5"][data-z="8"] {
   margin-top: 80;
 }
-.sprite.tile[data-y="6"][data-z="9"] {
-  z-index: 9;
+.sprite.tile[data-y="5"][data-z="9"] {
+  margin-top: 76;
+}
+.sprite.tile[data-y="5"][data-z="10"] {
   margin-top: 72;
 }
+.sprite.tile[data-y="6"] {
+  margin-top: 134;
+}
+.sprite.tile[data-y="6"][data-z="1"] {
+  margin-top: 130;
+}
+.sprite.tile[data-y="6"][data-z="2"] {
+  margin-top: 126;
+}
+.sprite.tile[data-y="6"][data-z="3"] {
+  margin-top: 122;
+}
+.sprite.tile[data-y="6"][data-z="4"] {
+  margin-top: 118;
+}
+.sprite.tile[data-y="6"][data-z="5"] {
+  margin-top: 114;
+}
+.sprite.tile[data-y="6"][data-z="6"] {
+  margin-top: 110;
+}
+.sprite.tile[data-y="6"][data-z="7"] {
+  margin-top: 106;
+}
+.sprite.tile[data-y="6"][data-z="8"] {
+  margin-top: 102;
+}
+.sprite.tile[data-y="6"][data-z="9"] {
+  margin-top: 98;
+}
 .sprite.tile[data-y="6"][data-z="10"] {
-  z-index: 10;
-  margin-top: 64;
+  margin-top: 94;
 }
 .sprite.tile[data-y="7"] {
-  margin-top: 168;
+  margin-top: 156;
 }
 .sprite.tile[data-y="7"][data-z="1"] {
-  z-index: 1;
-  margin-top: 160;
-}
-.sprite.tile[data-y="7"][data-z="2"] {
-  z-index: 2;
   margin-top: 152;
 }
+.sprite.tile[data-y="7"][data-z="2"] {
+  margin-top: 148;
+}
 .sprite.tile[data-y="7"][data-z="3"] {
-  z-index: 3;
   margin-top: 144;
 }
 .sprite.tile[data-y="7"][data-z="4"] {
-  z-index: 4;
-  margin-top: 136;
+  margin-top: 140;
 }
 .sprite.tile[data-y="7"][data-z="5"] {
-  z-index: 5;
-  margin-top: 128;
-}
-.sprite.tile[data-y="7"][data-z="6"] {
-  z-index: 6;
-  margin-top: 120;
-}
-.sprite.tile[data-y="7"][data-z="7"] {
-  z-index: 7;
-  margin-top: 112;
-}
-.sprite.tile[data-y="7"][data-z="8"] {
-  z-index: 8;
-  margin-top: 104;
-}
-.sprite.tile[data-y="7"][data-z="9"] {
-  z-index: 9;
-  margin-top: 96;
-}
-.sprite.tile[data-y="7"][data-z="10"] {
-  z-index: 10;
-  margin-top: 88;
-}
-.sprite.tile[data-y="8"] {
-  margin-top: 192;
-}
-.sprite.tile[data-y="8"][data-z="1"] {
-  z-index: 1;
-  margin-top: 184;
-}
-.sprite.tile[data-y="8"][data-z="2"] {
-  z-index: 2;
-  margin-top: 176;
-}
-.sprite.tile[data-y="8"][data-z="3"] {
-  z-index: 3;
-  margin-top: 168;
-}
-.sprite.tile[data-y="8"][data-z="4"] {
-  z-index: 4;
-  margin-top: 160;
-}
-.sprite.tile[data-y="8"][data-z="5"] {
-  z-index: 5;
-  margin-top: 152;
-}
-.sprite.tile[data-y="8"][data-z="6"] {
-  z-index: 6;
-  margin-top: 144;
-}
-.sprite.tile[data-y="8"][data-z="7"] {
-  z-index: 7;
   margin-top: 136;
 }
-.sprite.tile[data-y="8"][data-z="8"] {
-  z-index: 8;
+.sprite.tile[data-y="7"][data-z="6"] {
+  margin-top: 132;
+}
+.sprite.tile[data-y="7"][data-z="7"] {
   margin-top: 128;
 }
-.sprite.tile[data-y="8"][data-z="9"] {
-  z-index: 9;
+.sprite.tile[data-y="7"][data-z="8"] {
+  margin-top: 124;
+}
+.sprite.tile[data-y="7"][data-z="9"] {
   margin-top: 120;
 }
+.sprite.tile[data-y="7"][data-z="10"] {
+  margin-top: 116;
+}
+.sprite.tile[data-y="8"] {
+  margin-top: 178;
+}
+.sprite.tile[data-y="8"][data-z="1"] {
+  margin-top: 174;
+}
+.sprite.tile[data-y="8"][data-z="2"] {
+  margin-top: 170;
+}
+.sprite.tile[data-y="8"][data-z="3"] {
+  margin-top: 166;
+}
+.sprite.tile[data-y="8"][data-z="4"] {
+  margin-top: 162;
+}
+.sprite.tile[data-y="8"][data-z="5"] {
+  margin-top: 158;
+}
+.sprite.tile[data-y="8"][data-z="6"] {
+  margin-top: 154;
+}
+.sprite.tile[data-y="8"][data-z="7"] {
+  margin-top: 150;
+}
+.sprite.tile[data-y="8"][data-z="8"] {
+  margin-top: 146;
+}
+.sprite.tile[data-y="8"][data-z="9"] {
+  margin-top: 142;
+}
 .sprite.tile[data-y="8"][data-z="10"] {
-  z-index: 10;
-  margin-top: 112;
+  margin-top: 138;
 }
 .sprite.tile[data-y="9"] {
-  margin-top: 216;
-}
-.sprite.tile[data-y="9"][data-z="1"] {
-  z-index: 1;
-  margin-top: 208;
-}
-.sprite.tile[data-y="9"][data-z="2"] {
-  z-index: 2;
   margin-top: 200;
 }
-.sprite.tile[data-y="9"][data-z="3"] {
-  z-index: 3;
+.sprite.tile[data-y="9"][data-z="1"] {
+  margin-top: 196;
+}
+.sprite.tile[data-y="9"][data-z="2"] {
   margin-top: 192;
 }
+.sprite.tile[data-y="9"][data-z="3"] {
+  margin-top: 188;
+}
 .sprite.tile[data-y="9"][data-z="4"] {
-  z-index: 4;
   margin-top: 184;
 }
 .sprite.tile[data-y="9"][data-z="5"] {
-  z-index: 5;
-  margin-top: 176;
+  margin-top: 180;
 }
 .sprite.tile[data-y="9"][data-z="6"] {
-  z-index: 6;
-  margin-top: 168;
-}
-.sprite.tile[data-y="9"][data-z="7"] {
-  z-index: 7;
-  margin-top: 160;
-}
-.sprite.tile[data-y="9"][data-z="8"] {
-  z-index: 8;
-  margin-top: 152;
-}
-.sprite.tile[data-y="9"][data-z="9"] {
-  z-index: 9;
-  margin-top: 144;
-}
-.sprite.tile[data-y="9"][data-z="10"] {
-  z-index: 10;
-  margin-top: 136;
-}
-.sprite.tile[data-y="10"] {
-  margin-top: 240;
-}
-.sprite.tile[data-y="10"][data-z="1"] {
-  z-index: 1;
-  margin-top: 232;
-}
-.sprite.tile[data-y="10"][data-z="2"] {
-  z-index: 2;
-  margin-top: 224;
-}
-.sprite.tile[data-y="10"][data-z="3"] {
-  z-index: 3;
-  margin-top: 216;
-}
-.sprite.tile[data-y="10"][data-z="4"] {
-  z-index: 4;
-  margin-top: 208;
-}
-.sprite.tile[data-y="10"][data-z="5"] {
-  z-index: 5;
-  margin-top: 200;
-}
-.sprite.tile[data-y="10"][data-z="6"] {
-  z-index: 6;
-  margin-top: 192;
-}
-.sprite.tile[data-y="10"][data-z="7"] {
-  z-index: 7;
-  margin-top: 184;
-}
-.sprite.tile[data-y="10"][data-z="8"] {
-  z-index: 8;
   margin-top: 176;
 }
-.sprite.tile[data-y="10"][data-z="9"] {
-  z-index: 9;
+.sprite.tile[data-y="9"][data-z="7"] {
+  margin-top: 172;
+}
+.sprite.tile[data-y="9"][data-z="8"] {
   margin-top: 168;
 }
-.sprite.tile[data-y="10"][data-z="10"] {
-  z-index: 10;
+.sprite.tile[data-y="9"][data-z="9"] {
+  margin-top: 164;
+}
+.sprite.tile[data-y="9"][data-z="10"] {
   margin-top: 160;
 }
+.sprite.tile[data-y="10"] {
+  margin-top: 222;
+}
+.sprite.tile[data-y="10"][data-z="1"] {
+  margin-top: 218;
+}
+.sprite.tile[data-y="10"][data-z="2"] {
+  margin-top: 214;
+}
+.sprite.tile[data-y="10"][data-z="3"] {
+  margin-top: 210;
+}
+.sprite.tile[data-y="10"][data-z="4"] {
+  margin-top: 206;
+}
+.sprite.tile[data-y="10"][data-z="5"] {
+  margin-top: 202;
+}
+.sprite.tile[data-y="10"][data-z="6"] {
+  margin-top: 198;
+}
+.sprite.tile[data-y="10"][data-z="7"] {
+  margin-top: 194;
+}
+.sprite.tile[data-y="10"][data-z="8"] {
+  margin-top: 190;
+}
+.sprite.tile[data-y="10"][data-z="9"] {
+  margin-top: 186;
+}
+.sprite.tile[data-y="10"][data-z="10"] {
+  margin-top: 182;
+}
 .sprite.tile[data-y="11"] {
-  margin-top: 264;
+  margin-top: 244;
 }
 .sprite.tile[data-y="11"][data-z="1"] {
-  z-index: 1;
-  margin-top: 256;
-}
-.sprite.tile[data-y="11"][data-z="2"] {
-  z-index: 2;
-  margin-top: 248;
-}
-.sprite.tile[data-y="11"][data-z="3"] {
-  z-index: 3;
   margin-top: 240;
 }
-.sprite.tile[data-y="11"][data-z="4"] {
-  z-index: 4;
+.sprite.tile[data-y="11"][data-z="2"] {
+  margin-top: 236;
+}
+.sprite.tile[data-y="11"][data-z="3"] {
   margin-top: 232;
 }
+.sprite.tile[data-y="11"][data-z="4"] {
+  margin-top: 228;
+}
 .sprite.tile[data-y="11"][data-z="5"] {
-  z-index: 5;
   margin-top: 224;
 }
 .sprite.tile[data-y="11"][data-z="6"] {
-  z-index: 6;
-  margin-top: 216;
+  margin-top: 220;
 }
 .sprite.tile[data-y="11"][data-z="7"] {
-  z-index: 7;
-  margin-top: 208;
-}
-.sprite.tile[data-y="11"][data-z="8"] {
-  z-index: 8;
-  margin-top: 200;
-}
-.sprite.tile[data-y="11"][data-z="9"] {
-  z-index: 9;
-  margin-top: 192;
-}
-.sprite.tile[data-y="11"][data-z="10"] {
-  z-index: 10;
-  margin-top: 184;
-}
-.sprite.tile[data-y="12"] {
-  margin-top: 288;
-}
-.sprite.tile[data-y="12"][data-z="1"] {
-  z-index: 1;
-  margin-top: 280;
-}
-.sprite.tile[data-y="12"][data-z="2"] {
-  z-index: 2;
-  margin-top: 272;
-}
-.sprite.tile[data-y="12"][data-z="3"] {
-  z-index: 3;
-  margin-top: 264;
-}
-.sprite.tile[data-y="12"][data-z="4"] {
-  z-index: 4;
-  margin-top: 256;
-}
-.sprite.tile[data-y="12"][data-z="5"] {
-  z-index: 5;
-  margin-top: 248;
-}
-.sprite.tile[data-y="12"][data-z="6"] {
-  z-index: 6;
-  margin-top: 240;
-}
-.sprite.tile[data-y="12"][data-z="7"] {
-  z-index: 7;
-  margin-top: 232;
-}
-.sprite.tile[data-y="12"][data-z="8"] {
-  z-index: 8;
-  margin-top: 224;
-}
-.sprite.tile[data-y="12"][data-z="9"] {
-  z-index: 9;
   margin-top: 216;
 }
-.sprite.tile[data-y="12"][data-z="10"] {
-  z-index: 10;
+.sprite.tile[data-y="11"][data-z="8"] {
+  margin-top: 212;
+}
+.sprite.tile[data-y="11"][data-z="9"] {
   margin-top: 208;
 }
+.sprite.tile[data-y="11"][data-z="10"] {
+  margin-top: 204;
+}
+.sprite.tile[data-y="12"] {
+  margin-top: 266;
+}
+.sprite.tile[data-y="12"][data-z="1"] {
+  margin-top: 262;
+}
+.sprite.tile[data-y="12"][data-z="2"] {
+  margin-top: 258;
+}
+.sprite.tile[data-y="12"][data-z="3"] {
+  margin-top: 254;
+}
+.sprite.tile[data-y="12"][data-z="4"] {
+  margin-top: 250;
+}
+.sprite.tile[data-y="12"][data-z="5"] {
+  margin-top: 246;
+}
+.sprite.tile[data-y="12"][data-z="6"] {
+  margin-top: 242;
+}
+.sprite.tile[data-y="12"][data-z="7"] {
+  margin-top: 238;
+}
+.sprite.tile[data-y="12"][data-z="8"] {
+  margin-top: 234;
+}
+.sprite.tile[data-y="12"][data-z="9"] {
+  margin-top: 230;
+}
+.sprite.tile[data-y="12"][data-z="10"] {
+  margin-top: 226;
+}
 .sprite.tile[data-y="13"] {
-  margin-top: 312;
-}
-.sprite.tile[data-y="13"][data-z="1"] {
-  z-index: 1;
-  margin-top: 304;
-}
-.sprite.tile[data-y="13"][data-z="2"] {
-  z-index: 2;
-  margin-top: 296;
-}
-.sprite.tile[data-y="13"][data-z="3"] {
-  z-index: 3;
   margin-top: 288;
 }
-.sprite.tile[data-y="13"][data-z="4"] {
-  z-index: 4;
+.sprite.tile[data-y="13"][data-z="1"] {
+  margin-top: 284;
+}
+.sprite.tile[data-y="13"][data-z="2"] {
   margin-top: 280;
 }
-.sprite.tile[data-y="13"][data-z="5"] {
-  z-index: 5;
+.sprite.tile[data-y="13"][data-z="3"] {
+  margin-top: 276;
+}
+.sprite.tile[data-y="13"][data-z="4"] {
   margin-top: 272;
 }
+.sprite.tile[data-y="13"][data-z="5"] {
+  margin-top: 268;
+}
 .sprite.tile[data-y="13"][data-z="6"] {
-  z-index: 6;
   margin-top: 264;
 }
 .sprite.tile[data-y="13"][data-z="7"] {
-  z-index: 7;
-  margin-top: 256;
+  margin-top: 260;
 }
 .sprite.tile[data-y="13"][data-z="8"] {
-  z-index: 8;
-  margin-top: 248;
-}
-.sprite.tile[data-y="13"][data-z="9"] {
-  z-index: 9;
-  margin-top: 240;
-}
-.sprite.tile[data-y="13"][data-z="10"] {
-  z-index: 10;
-  margin-top: 232;
-}
-.sprite.tile[data-y="14"] {
-  margin-top: 336;
-}
-.sprite.tile[data-y="14"][data-z="1"] {
-  z-index: 1;
-  margin-top: 328;
-}
-.sprite.tile[data-y="14"][data-z="2"] {
-  z-index: 2;
-  margin-top: 320;
-}
-.sprite.tile[data-y="14"][data-z="3"] {
-  z-index: 3;
-  margin-top: 312;
-}
-.sprite.tile[data-y="14"][data-z="4"] {
-  z-index: 4;
-  margin-top: 304;
-}
-.sprite.tile[data-y="14"][data-z="5"] {
-  z-index: 5;
-  margin-top: 296;
-}
-.sprite.tile[data-y="14"][data-z="6"] {
-  z-index: 6;
-  margin-top: 288;
-}
-.sprite.tile[data-y="14"][data-z="7"] {
-  z-index: 7;
-  margin-top: 280;
-}
-.sprite.tile[data-y="14"][data-z="8"] {
-  z-index: 8;
-  margin-top: 272;
-}
-.sprite.tile[data-y="14"][data-z="9"] {
-  z-index: 9;
-  margin-top: 264;
-}
-.sprite.tile[data-y="14"][data-z="10"] {
-  z-index: 10;
   margin-top: 256;
 }
+.sprite.tile[data-y="13"][data-z="9"] {
+  margin-top: 252;
+}
+.sprite.tile[data-y="13"][data-z="10"] {
+  margin-top: 248;
+}
+.sprite.tile[data-y="14"] {
+  margin-top: 310;
+}
+.sprite.tile[data-y="14"][data-z="1"] {
+  margin-top: 306;
+}
+.sprite.tile[data-y="14"][data-z="2"] {
+  margin-top: 302;
+}
+.sprite.tile[data-y="14"][data-z="3"] {
+  margin-top: 298;
+}
+.sprite.tile[data-y="14"][data-z="4"] {
+  margin-top: 294;
+}
+.sprite.tile[data-y="14"][data-z="5"] {
+  margin-top: 290;
+}
+.sprite.tile[data-y="14"][data-z="6"] {
+  margin-top: 286;
+}
+.sprite.tile[data-y="14"][data-z="7"] {
+  margin-top: 282;
+}
+.sprite.tile[data-y="14"][data-z="8"] {
+  margin-top: 278;
+}
+.sprite.tile[data-y="14"][data-z="9"] {
+  margin-top: 274;
+}
+.sprite.tile[data-y="14"][data-z="10"] {
+  margin-top: 270;
+}
 .sprite.tile[data-y="15"] {
-  margin-top: 360;
+  margin-top: 332;
 }
 .sprite.tile[data-y="15"][data-z="1"] {
-  z-index: 1;
-  margin-top: 352;
-}
-.sprite.tile[data-y="15"][data-z="2"] {
-  z-index: 2;
-  margin-top: 344;
-}
-.sprite.tile[data-y="15"][data-z="3"] {
-  z-index: 3;
-  margin-top: 336;
-}
-.sprite.tile[data-y="15"][data-z="4"] {
-  z-index: 4;
   margin-top: 328;
 }
-.sprite.tile[data-y="15"][data-z="5"] {
-  z-index: 5;
+.sprite.tile[data-y="15"][data-z="2"] {
+  margin-top: 324;
+}
+.sprite.tile[data-y="15"][data-z="3"] {
   margin-top: 320;
 }
-.sprite.tile[data-y="15"][data-z="6"] {
-  z-index: 6;
+.sprite.tile[data-y="15"][data-z="4"] {
+  margin-top: 316;
+}
+.sprite.tile[data-y="15"][data-z="5"] {
   margin-top: 312;
 }
+.sprite.tile[data-y="15"][data-z="6"] {
+  margin-top: 308;
+}
 .sprite.tile[data-y="15"][data-z="7"] {
-  z-index: 7;
   margin-top: 304;
 }
 .sprite.tile[data-y="15"][data-z="8"] {
-  z-index: 8;
-  margin-top: 296;
+  margin-top: 300;
 }
 .sprite.tile[data-y="15"][data-z="9"] {
-  z-index: 9;
-  margin-top: 288;
+  margin-top: 296;
 }
 .sprite.tile[data-y="15"][data-z="10"] {
-  z-index: 10;
-  margin-top: 280;
+  margin-top: 292;
 }
 .sprite.tile[data-y="16"] {
-  margin-top: 384;
+  margin-top: 354;
 }
 .sprite.tile[data-y="16"][data-z="1"] {
-  z-index: 1;
-  margin-top: 376;
+  margin-top: 350;
 }
 .sprite.tile[data-y="16"][data-z="2"] {
-  z-index: 2;
-  margin-top: 368;
+  margin-top: 346;
 }
 .sprite.tile[data-y="16"][data-z="3"] {
-  z-index: 3;
-  margin-top: 360;
+  margin-top: 342;
 }
 .sprite.tile[data-y="16"][data-z="4"] {
-  z-index: 4;
-  margin-top: 352;
+  margin-top: 338;
 }
 .sprite.tile[data-y="16"][data-z="5"] {
-  z-index: 5;
-  margin-top: 344;
+  margin-top: 334;
 }
 .sprite.tile[data-y="16"][data-z="6"] {
-  z-index: 6;
-  margin-top: 336;
+  margin-top: 330;
 }
 .sprite.tile[data-y="16"][data-z="7"] {
-  z-index: 7;
-  margin-top: 328;
+  margin-top: 326;
 }
 .sprite.tile[data-y="16"][data-z="8"] {
-  z-index: 8;
-  margin-top: 320;
+  margin-top: 322;
 }
 .sprite.tile[data-y="16"][data-z="9"] {
-  z-index: 9;
-  margin-top: 312;
+  margin-top: 318;
 }
 .sprite.tile[data-y="16"][data-z="10"] {
-  z-index: 10;
-  margin-top: 304;
+  margin-top: 314;
 }
 .sprite.tile[data-y="17"] {
-  margin-top: 408;
-}
-.sprite.tile[data-y="17"][data-z="1"] {
-  z-index: 1;
-  margin-top: 400;
-}
-.sprite.tile[data-y="17"][data-z="2"] {
-  z-index: 2;
-  margin-top: 392;
-}
-.sprite.tile[data-y="17"][data-z="3"] {
-  z-index: 3;
-  margin-top: 384;
-}
-.sprite.tile[data-y="17"][data-z="4"] {
-  z-index: 4;
   margin-top: 376;
 }
-.sprite.tile[data-y="17"][data-z="5"] {
-  z-index: 5;
+.sprite.tile[data-y="17"][data-z="1"] {
+  margin-top: 372;
+}
+.sprite.tile[data-y="17"][data-z="2"] {
   margin-top: 368;
 }
-.sprite.tile[data-y="17"][data-z="6"] {
-  z-index: 6;
+.sprite.tile[data-y="17"][data-z="3"] {
+  margin-top: 364;
+}
+.sprite.tile[data-y="17"][data-z="4"] {
   margin-top: 360;
 }
-.sprite.tile[data-y="17"][data-z="7"] {
-  z-index: 7;
+.sprite.tile[data-y="17"][data-z="5"] {
+  margin-top: 356;
+}
+.sprite.tile[data-y="17"][data-z="6"] {
   margin-top: 352;
 }
+.sprite.tile[data-y="17"][data-z="7"] {
+  margin-top: 348;
+}
 .sprite.tile[data-y="17"][data-z="8"] {
-  z-index: 8;
   margin-top: 344;
 }
 .sprite.tile[data-y="17"][data-z="9"] {
-  z-index: 9;
-  margin-top: 336;
+  margin-top: 340;
 }
 .sprite.tile[data-y="17"][data-z="10"] {
-  z-index: 10;
-  margin-top: 328;
+  margin-top: 336;
 }
 .sprite.tile[data-y="18"] {
-  margin-top: 432;
+  margin-top: 398;
 }
 .sprite.tile[data-y="18"][data-z="1"] {
-  z-index: 1;
-  margin-top: 424;
+  margin-top: 394;
 }
 .sprite.tile[data-y="18"][data-z="2"] {
-  z-index: 2;
-  margin-top: 416;
+  margin-top: 390;
 }
 .sprite.tile[data-y="18"][data-z="3"] {
-  z-index: 3;
-  margin-top: 408;
+  margin-top: 386;
 }
 .sprite.tile[data-y="18"][data-z="4"] {
-  z-index: 4;
-  margin-top: 400;
+  margin-top: 382;
 }
 .sprite.tile[data-y="18"][data-z="5"] {
-  z-index: 5;
-  margin-top: 392;
+  margin-top: 378;
 }
 .sprite.tile[data-y="18"][data-z="6"] {
-  z-index: 6;
-  margin-top: 384;
+  margin-top: 374;
 }
 .sprite.tile[data-y="18"][data-z="7"] {
-  z-index: 7;
-  margin-top: 376;
+  margin-top: 370;
 }
 .sprite.tile[data-y="18"][data-z="8"] {
-  z-index: 8;
-  margin-top: 368;
+  margin-top: 366;
 }
 .sprite.tile[data-y="18"][data-z="9"] {
-  z-index: 9;
-  margin-top: 360;
+  margin-top: 362;
 }
 .sprite.tile[data-y="18"][data-z="10"] {
-  z-index: 10;
-  margin-top: 352;
+  margin-top: 358;
 }
 .sprite.tile[data-y="19"] {
-  margin-top: 456;
+  margin-top: 420;
 }
 .sprite.tile[data-y="19"][data-z="1"] {
-  z-index: 1;
-  margin-top: 448;
-}
-.sprite.tile[data-y="19"][data-z="2"] {
-  z-index: 2;
-  margin-top: 440;
-}
-.sprite.tile[data-y="19"][data-z="3"] {
-  z-index: 3;
-  margin-top: 432;
-}
-.sprite.tile[data-y="19"][data-z="4"] {
-  z-index: 4;
-  margin-top: 424;
-}
-.sprite.tile[data-y="19"][data-z="5"] {
-  z-index: 5;
   margin-top: 416;
 }
-.sprite.tile[data-y="19"][data-z="6"] {
-  z-index: 6;
+.sprite.tile[data-y="19"][data-z="2"] {
+  margin-top: 412;
+}
+.sprite.tile[data-y="19"][data-z="3"] {
   margin-top: 408;
 }
-.sprite.tile[data-y="19"][data-z="7"] {
-  z-index: 7;
+.sprite.tile[data-y="19"][data-z="4"] {
+  margin-top: 404;
+}
+.sprite.tile[data-y="19"][data-z="5"] {
   margin-top: 400;
 }
-.sprite.tile[data-y="19"][data-z="8"] {
-  z-index: 8;
+.sprite.tile[data-y="19"][data-z="6"] {
+  margin-top: 396;
+}
+.sprite.tile[data-y="19"][data-z="7"] {
   margin-top: 392;
 }
+.sprite.tile[data-y="19"][data-z="8"] {
+  margin-top: 388;
+}
 .sprite.tile[data-y="19"][data-z="9"] {
-  z-index: 9;
   margin-top: 384;
 }
 .sprite.tile[data-y="19"][data-z="10"] {
-  z-index: 10;
-  margin-top: 376;
+  margin-top: 380;
 }
 .sprite.tile[data-y="20"] {
-  margin-top: 480;
+  margin-top: 442;
 }
 .sprite.tile[data-y="20"][data-z="1"] {
-  z-index: 1;
-  margin-top: 472;
+  margin-top: 438;
 }
 .sprite.tile[data-y="20"][data-z="2"] {
-  z-index: 2;
-  margin-top: 464;
+  margin-top: 434;
 }
 .sprite.tile[data-y="20"][data-z="3"] {
-  z-index: 3;
-  margin-top: 456;
+  margin-top: 430;
 }
 .sprite.tile[data-y="20"][data-z="4"] {
-  z-index: 4;
-  margin-top: 448;
+  margin-top: 426;
 }
 .sprite.tile[data-y="20"][data-z="5"] {
-  z-index: 5;
-  margin-top: 440;
+  margin-top: 422;
 }
 .sprite.tile[data-y="20"][data-z="6"] {
-  z-index: 6;
-  margin-top: 432;
+  margin-top: 418;
 }
 .sprite.tile[data-y="20"][data-z="7"] {
-  z-index: 7;
-  margin-top: 424;
+  margin-top: 414;
 }
 .sprite.tile[data-y="20"][data-z="8"] {
-  z-index: 8;
-  margin-top: 416;
+  margin-top: 410;
 }
 .sprite.tile[data-y="20"][data-z="9"] {
-  z-index: 9;
-  margin-top: 408;
+  margin-top: 406;
 }
 .sprite.tile[data-y="20"][data-z="10"] {
-  z-index: 10;
-  margin-top: 400;
-}
-
-._tile {
-  width: 349px;
-  height: 480px;
-  position: absolute;
-  background-image: url(../img/_tile.png);
-}
-._tile.show {
-  position: relative;
-}
-._tile.selected {
-  opacity: .6;
+  margin-top: 402;
 }
 
 /*# sourceMappingURL=sprite.css.map */
