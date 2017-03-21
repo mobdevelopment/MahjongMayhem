@@ -12,7 +12,10 @@
   background-image: url(../img/spriteSD.png);
 }
 .sprite.tile.selected {
-  opacity: .6;
+  opacity: .6 !important;
+}
+.sprite.tile.cheat {
+  opacity: .4;
 }
 .sprite.tile-Bamboo1 {
   background-position: 0 0px;

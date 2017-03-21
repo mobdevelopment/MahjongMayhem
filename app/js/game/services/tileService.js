@@ -15,8 +15,6 @@ module.exports = function(gameService, gameFactory, authService) {
 				if (self.matchTile._id != tile._id) {
 
 					var match = checkTileMatch(self.matchTile, tile);
-					// console.log(match);
-					// console.log(gameFactory.getCurrentGameMode());
 					// if (gameFactory.getCurrentGameMode() == 'play' && match) {
 					if (match) {
 						// gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
@@ -34,6 +32,30 @@ module.exports = function(gameService, gameFactory, authService) {
 
 		}
 		return self.matchTile;
+	}
+
+	service.cheatTile = function() {
+		var tiles = gameFactory.getCurrentBoard();
+		var selectableTiles = [];
+		// look for all selectable tiles;
+		tiles.forEach(function (tileElem) {
+			if (checkTileSelectable(tileElem)) {
+				selectableTiles.push(tileElem);
+			}
+		});
+
+		for (var l = 0; l < selectableTiles.length; l++) {
+			for (var r = 0; r < selectableTiles.length; r++) {
+				if (selectableTiles[l]._id != selectableTiles[r]._id) {
+					if (checkTileMatch(selectableTiles[l], selectableTiles[r])) {
+						// tiles can be matched
+						selectCheatTile(selectableTiles[l]);
+						selectCheatTile(selectableTiles[r]);
+						return;
+					}
+				}
+			}
+		}
 	}
 
 	function selectTile(tile) {
@@ -56,6 +78,16 @@ module.exports = function(gameService, gameFactory, authService) {
 			var element = $(this);
 			var id = $(this).attr('tileId');
 			element.removeClass('selected');
+		});
+	}
+	function selectCheatTile(tile) {
+		$('.board .tile').each(function (i) {
+			var element = $(this);
+			var id = element.attr('tileId');
+			
+			if(tile._id == id) {
+				element.addClass('cheat');
+			}
 		});
 	}
 

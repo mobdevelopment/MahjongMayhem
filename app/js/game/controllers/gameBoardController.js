@@ -1,6 +1,6 @@
 var Game = require('../models/game');
 var GameTemplate = require('../models/gameTemplate');
-module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService, gameFactory, gameSocket, authService){
+module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService, gameFactory, gameSocket, authService, tileService){
 	var self = this;
 	self.gameTemplates;
 	self.currentUser = authService.getUser();
@@ -116,5 +116,9 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 
 	self.test = function() {
 
+	}
+
+	self.cheat = function() {
+		tileService.cheatTile();
 	}
 };

@@ -31,7 +31,11 @@ $board-depth: 10; 	/// ranging 0 ~ 3 	// can be more or less depending on the te
 		background-image: url(../img/spriteSD.png);
 
 		&.selected {
-			opacity: .6; 
+			opacity: .6 !important;
+		}
+
+		&.cheat {
+			opacity: .4;
 		}
 
 		@each $tile in $tiles {
