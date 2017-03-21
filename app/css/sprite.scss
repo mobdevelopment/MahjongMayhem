@@ -32,10 +32,12 @@ $board-depth: 10; 	/// ranging 0 ~ 3 	// can be more or less depending on the te
 
 		&.selected {
 			opacity: .6 !important;
+			filter: invert(0%) !important;
 		}
 
 		&.cheat {
-			opacity: .4;
+			opacity: .6;
+			filter: invert(100%) ;
 		}
 
 		@each $tile in $tiles {
