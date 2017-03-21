@@ -6,21 +6,15 @@ module.exports = function() {
 		scope: {
 			model: '='
 		},
-		controller: function($scope) {
-			// console.log("kom ik hier");
-			// $scope.click = function(tile) {
-			// 	// do stuff
-			// 	console.log('see me clicking');
-			// }
+		controller: function($scope, $stateParams, tileService) {
+			// console.log("tile loading");
+			var selectedTile;
 
-			// $("").each(function() {
-			// 	var elem = $(this);
-			// 	var id = elem.attr('tileId');
+			$scope.click = function(tile) {
+				// do stuff
+				var checkTile = tileService.checkTile(tile);
 
-			// 	if(tile.id == id) {
-			// 		//selected
-			// 	}
-			// });
+			}
 		},
 		link: function(scope, element, attrs) {
 			/// set z-index for the tiles

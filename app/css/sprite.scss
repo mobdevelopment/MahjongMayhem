@@ -2,14 +2,14 @@ $tiles: ('Bamboo1', 'Bamboo2', 'Bamboo3', 'Bamboo4', 'Bamboo5', 'Bamboo6', 'Bamb
 		 'Character1', 'Character2', 'Character3', 'Character4', 'Character5', 'Character6', 'Character7', 'Character8', 'Character9',
 		 'Circle1', 'Circle2', 'Circle3', 'Circle4', 'Circle5', 'Circle6', 'Circle7', 'Circle8', 'Circle9', 
 		 'DragonGreen', 'DragonRed', 'DragonWhite', 
-		 'FlowerBamboo', 'FlowerChrysanthemum', 'FlowerOrchild', 'FlowerPlum',
-		 'SeasonFall', 'SeasonSpring', 'SeasonSummer', 'SeasonWinter',
+		 'FlowerBamboo', 'FlowerChrysantememum', 'FlowerOrchid', 'FlowerPlum',
+		 'SeasonAutumn', 'SeasonSpring', 'SeasonSummer', 'SeasonWinter',
 		 'WindEast', 'WindNorth', 'WindSouth', 'WindWest');
 
 /// changed the size of the sprite. the width is now 350px
-$tile-width: 35;	/// 10% of original (350) //9 = other possible size
-$tile-height: 48; 	/// 10% of original (480) //12 = other possible size
-$tile-side: 2;		/// 05% of original (42)
+$tile-width: 35 * 1.5;	/// 10% of original (350) //9 = other possible size
+$tile-height: 48 * 1.5; 	/// 10% of original (480) //12 = other possible size
+$tile-side: 2 * 1.5;		/// 05% of original (42)
 
 $board-width: 30;	/// ranging 1 ~ 29  // can be more or less depending on the template
 $board-height: 20;	/// ranging 1 ~ 15  // can be more or less depending on the template
@@ -42,27 +42,21 @@ $board-depth: 10; 	/// ranging 0 ~ 3 	// can be more or less depending on the te
 			}
 		}
 
-		@for $x from 1 through $board-width {
+		@for $x from 0 through $board-width {
 			&[data-x="#{$x}"] {
 				margin-left: #{$x * ($tile-width / 2) - (($x - 1) * $tile-side)};
 
-				@for $z from 1 through $board-depth {
-					&[data-z="#{$z}"] {
-						// z-index: #{$z}; /// ($z + 10000) + ($board-width - $x)
-						margin-left: #{($x * ($tile-width / 2)) + ($z * 4) - (($x - 1) * $tile-side)};
-					}
-				}
-			}
-		}
+				@for $y from 0 through $board-height {
+					&[data-y="#{$y}"] {
+						margin-top: #{$y * ($tile-height / 2) - (($y - 1) * $tile-side)};
 
-		@for $y from 1 through $board-height {
-			&[data-y="#{$y}"] {
-				margin-top: #{$y * ($tile-height / 2) - (($y - 1) * $tile-side)};
-
-				@for $z from 1 through $board-depth {
-					&[data-z="#{$z}"] {
-						// z-index: #{$z};	/// ($z + 10000) + (100 * $y)
-						margin-top: #{($y * ($tile-height / 2)) - ($z * 4)  - (($y - 1) * $tile-side)};
+						@for $z from 1 through $board-depth {
+							&[data-z="#{$z}"] {
+								margin-left: #{($x * ($tile-width / 2)) + ($z * 4) - (($x - 1) * $tile-side)};
+								margin-top: #{($y * ($tile-height / 2)) - ($z * 4)  - (($y - 1) * $tile-side)};
+								// z-index: #{($z * 10000) + (30 - $x) + ($y)};
+							}
+						}
 					}
 				}
 			}

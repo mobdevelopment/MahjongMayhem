@@ -66,8 +66,18 @@ module.exports = function($http){
 		});
 	}
 
+	// GET :: /Games/:id/Tiles/matches
+	service.getMatchedTiles = function (gameId) {
+		return $http({
+			method: 'GET',
+			url: apiBaseUrl + '/Games/' + gameId + '/Tiles/matches'
+		}).then(function (response) {
+			return response.data;
+		});
+	}
+
 	// POST :: /Games/:id/Tiles/matches
-	service.matchTile = function (gameId, tile1, tile2) {
+	service.postMatchedTiles = function (gameId, tile1, tile2) {
 		return $http({
 			method: 'POST',
 			url: apiBaseUrl + '/Games/' + gameId + '/Tiles/matches',

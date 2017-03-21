@@ -1,6 +1,6 @@
 var Game = require('../models/game');
 var GameTemplate = require('../models/gameTemplate');
-module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory, authService){
+module.exports = function($scope, $http, $q, $timeout, gameService, authService){
 	var self = this;
 	self.games;
 	self.gameTemplates;
@@ -84,8 +84,6 @@ module.exports = function($scope, $http, $q, $timeout, gameService, gameFactory,
 			}
 			if (count == 0) {
 				return true;
-			} else {
-				return false;
 			}
 		}
 		return false;

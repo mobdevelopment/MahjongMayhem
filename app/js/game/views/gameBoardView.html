@@ -1,12 +1,34 @@
 <div class="">
-	<!-- <div ng-include="'/js/game/views/partials/navbar.html'"></div> -->
+	<div ng-include="'/js/game/views/partials/navbar.html'"></div>
 
 	<div ng-include="'/js/game/views/partials/alert.html'"></div>
 
-<!-- Gameboard... -->
+<!-- Game... -->
+	<div>
+<!-- 		<button class="btn btn-success" ng-click="gameCon.test()">test</button>
+ -->
+		<!-- Gameboard... -->
+		<div class="board col-xs-10" ng-show="gameCon.game.state == 'playing'">
+			<tile ng-repeat="tile in gameCon.tiles" model="tile"></tile>
+		</div>
 
-	<div class="board" ng-show="gameCon.game.state == 'playing'">
-		<tile ng-repeat="tile in gameCon.tiles" model="tile"></tile>
+		<!-- Scoreboard... -->
+		<div class="scoreBoard col-xs-2 col-xs-offset-1">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Naam:</th>
+						<th>Score:</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="player in gameCon.game.players">
+						<td id='{{ player._id }}Name'>{{ player.name }}</td>
+						<td id='{{ player._id }}Matches'>{{ player.numberOfMatches }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 
 </div>

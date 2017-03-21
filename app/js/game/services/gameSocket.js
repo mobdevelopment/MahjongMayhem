@@ -1,26 +1,31 @@
-module.exports = function () {
-	return {
-		connect: connect,
-		match: match,
-		endGame : endGame
-	};
-
+module.exports = function ($rootScope) {
+	var service = {}; 
+	var socketConnectUrl = "http://mahjongmayhem.herokuapp.com?gameId="
 	var socket;
-	function connect(gameId) {
-		if (io) {
-			socket = io.connect('http://mahjongmayhem.herokuapp.com?gameId=' + gameId);
-		}
+
+	service.connect = function (gameId) {
+		socket = io.connect(socketConnectUrl + gameId);
 	}
 
-	function match(callback){
-		socket.on("match", function(data){
-			if(callback) callback(data);
+	service.on = function (eventName, callback) {
+		socket.on(eventName, function () {
+			var args = arguments;
+			$rootScope.$apply(function () {
+				callback.apply(socket, args);
+			});
 		});
 	}
 
-	function endGame(callback){
-		socket.on("end", function(data){
-			if(callback) callback(data);
+	service.emit = function (eventName, data, callback) {
+		socket.emit(eventName, data, function () {
+			var args = arguments;
+			$rootScope.$apply(function () {
+				if (callback) {
+					callback.apply(socket, args);
+				}
+			});
 		});
 	}
+	
+	return service;
 };

@@ -18,7 +18,7 @@ module.exports = function ($stateProvider) {
 		})
 		.state('game', {
 			url: '/game/:id',
-			params: {'id': null },
+			params: {'id': null, mode: null},
 			templateUrl: '/js/game/views/gameBoardView.html',
 			controller: 'gameBoardController as gameCon'
 			// controller: function ($scope, $state, $stateParams) {
