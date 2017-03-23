@@ -19,9 +19,10 @@ module.exports = function(gameService, gameFactory, authService) {
 					if (match) {
 						// gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
 						console.log('fake:: pushing match to api');
-						setScore();
+						setScore(authService.getUser());
 						removeTile(self.matchTile._id);
 						removeTile(tile._id);
+						setGameOver();
 					}
 				}
 				deselectTile();
@@ -59,18 +60,7 @@ module.exports = function(gameService, gameFactory, authService) {
 	}
 
 	function selectTile(tile) {
-		$('.board .tile').each(function (i) {
-			var element = $(this);
-			var id = element.attr('tileId');
-
-			if(tile._id == id) {
-				// if (!element.hasClass('selected')) {
-					element.addClass('selected');
-				// } else {
-					// element.removeClass('selected');
-				// }
-			}	
-		});
+		$('div[tileid="' + tile._id + '"]').addClass('selected');
 	}
 
 	function deselectTile() {
@@ -81,26 +71,62 @@ module.exports = function(gameService, gameFactory, authService) {
 		});
 	}
 	function selectCheatTile(tile) {
-		$('.board .tile').each(function (i) {
-			var element = $(this);
-			var id = element.attr('tileId');
-			
-			if(tile._id == id) {
-				element.addClass('cheat');
-			}
-		});
+		$('div[tileid="' + tile._id + '"]').addClass('cheat');
 	}
 
-	function setScore() {
-		var user = authService.getUser();
-		//need to set score;
-		// console.log(user);
-		// $("#" + user.username + 'Matches').val('1');
+	service.linkSetScore = function(username) {
+		setScore(username);
 	}
+
+	function setScore(user) {
+		var game = gameFactory.getCurrentGame();
+		game.players.forEach(function (userElem) {
+			if (userElem._id == user.username) {
+				userElem.numberOfMatches = userElem.numberOfMatches+1;
+			}
+		});
+		gameFactory.setCurrentGame(game);
+	}
+
+	function gameOverCheck() {
+		var tiles = gameFactory.getCurrentBoard();
+		var selectableTiles = [];
+		// look for all selectable tiles;
+		tiles.forEach(function (tileElem) {
+			if (checkTileSelectable(tileElem)) {
+				selectableTiles.push(tileElem);
+			}
+		});
+
+		for (var l = 0; l < selectableTiles.length; l++) {
+			for (var r = 0; r < selectableTiles.length; r++) {
+				if (selectableTiles[l]._id != selectableTiles[r]._id) {
+					if (checkTileMatch(selectableTiles[l], selectableTiles[r])) {
+						// tiles can be matched
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
+
+	function setGameOver() {
+		if (gameOverCheck()) {
+			var game = gameFactory.getCurrentGame();
+			game.state = 'finished';
+			console.log('gameover');
+		}
+	}
+
 
 	function removeTile(tileId) {
 		$('div[tileid="' + tileId + '"]').remove();
 		updateBoard(tileId);
+	}
+
+	service.linkRemoveTile = function(tileId) {
+		removeTile(tileId);
 	}
 
 	function checkTileMatch(tile1, tile2) {
@@ -168,17 +194,6 @@ module.exports = function(gameService, gameFactory, authService) {
 	}
 
 	function updateBoard(tileId) {
-		// // var tiles = gameFactory.getCurrentBoard();
-		// // console.log(tiles);
-
-		// var tiles = 
-		// // for (var i = 0; i < tiles.length; i++) {
-		// // 	if (tiles[i]._id === tileId) {
-		// // 		console.log(tiles[i]);
-		// // 		tiles.splice(i, 1);
-		// // 	}
-		// // }
-		// console.log(tiles);
 		gameFactory.setCurrentBoard(gameFactory.getCurrentBoard().filter(function (elem) {
 			return elem._id !== tileId;
 		}));

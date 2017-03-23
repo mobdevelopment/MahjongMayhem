@@ -5,15 +5,17 @@ module.exports = function($scope, $http, $q, $timeout, gameService, authService)
 	self.games;
 	self.gameTemplates;
 	self.currentUser = authService.getUser();
-	// var gameId;
-	// var socket;
 
 	self.successMessage = '';
 	self.errorMessage = '';
 	self.gameDetail;
 
 	init();
-
+	
+	function init() {
+		getGames();
+		getGameTemplates();
+	}
 
 	function getGames() {
 		self.games = [];
@@ -25,7 +27,6 @@ module.exports = function($scope, $http, $q, $timeout, gameService, authService)
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
-			// console.log(self.games);
 	};
 
 	function getGameTemplates() {
@@ -102,7 +103,6 @@ module.exports = function($scope, $http, $q, $timeout, gameService, authService)
 	};
 
 	self.startGame = function(gameId) {
-		console.log('clicked game start');
 		gameService.startGame(gameId)
 			.then(function (response) {
 				self.successMessage = 'The game has started!';
@@ -133,10 +133,4 @@ module.exports = function($scope, $http, $q, $timeout, gameService, authService)
 			self.errorMessage = '';
 		}, 3000);
 	};
-	
-	function init() {
-		getGames();
-		getGameTemplates();
-	}
-
 };

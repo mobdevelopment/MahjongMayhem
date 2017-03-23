@@ -28236,4 +28236,8 @@
   color: #262626;
 }
 
+.blocked {
+  position: relative;
+}
+
 /*# sourceMappingURL=app.css.map */

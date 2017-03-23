@@ -5,10 +5,15 @@
 
 <!-- Game... -->
 	<div>
-		<button class="btn btn-success" ng-click="gameCon.cheat()">cheat</button>
+		
 
 		<!-- Gameboard... -->
 		<div class="board col-xs-10" ng-show="gameCon.game.state == 'playing'">
+			<button class="btn btn-success" ng-click="gameCon.cheat()">cheat</button>
+			<tile ng-repeat="tile in gameCon.tiles" model="tile"></tile>
+		</div>
+		<div class="board col-xs-10 blocked" ng-show="gameCon.game.state == 'finished'">
+			<div class="text-center"><h2>This game has ended</h2></div>
 			<tile ng-repeat="tile in gameCon.tiles" model="tile"></tile>
 		</div>
 
@@ -23,8 +28,8 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="player in gameCon.game.players">
-						<td id='{{ player._id }}Name'>{{ player.name }}</td>
-						<td id='{{ player._id }}Matches'>{{ player.numberOfMatches }}</td>
+						<td id='{{ player.name }}Name'>{{ player.name }}</td>
+						<td id='{{ player.name }}Matches'>{{ player.numberOfMatches }}</td>
 					</tr>
 				</tbody>
 			</table>

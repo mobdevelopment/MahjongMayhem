@@ -1,26 +1,33 @@
-var Game = require('../models/game');
-var GameTemplate = require('../models/gameTemplate');
+// var Game = require('../models/game');
+// var GameTemplate = require('../models/gameTemplate');
 module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService, gameFactory, gameSocket, authService, tileService){
 	var self = this;
-	self.gameTemplates;
+	// self.gameTemplates;
 	self.currentUser = authService.getUser();
 	self.tiles = [];
-	self.matchedTiles = []
+	// self.matchedTiles = [];
 	self.game = [];
-	// var socket;
-	// selectedTiles = [];
 
 	self.successMessage = '';
 	self.errorMessage = '';
-	self.gameDetail;
+	// self.gameDetail;
 
 	init();
+
+	function init() {
+		gameFactory.setCurrentGameId($stateParams.id);
+		gameFactory.setCurrentGameMode($stateParams.mode);
+		gameSocket.connect($stateParams.id);
+		
+		getGameBoard();
+		getGame();
+	}
 
 	function getGame() {
 		gameService.getGame(gameFactory.getCurrentGameId())
 			.then(function successCallback(response) {
 				self.game = response;
-	
+				gameFactory.setCurrentGame(self.game);
 				console.log("game Data:: ");
 				console.log(self.game);
 			}, function errorCallback(err) {
@@ -35,39 +42,16 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 					if (tile.match != undefined) {
 						// console.log('mached tile');
 						// console.log(tile);
-						// self.matchedTiles.push(tile);
 					} else {
 						self.tiles.push(tile);
 					}
 				});
-				console.log('gameBoardList');
+				// console.log('gameBoardList');
 			}, function errorCallback(err) {
 				console.log("ERR:: " + err);
 			});
 		gameFactory.setCurrentBoard(self.tiles);
 	};
-
-	/// Werkt niet nog niet. tegels die matchen of wholesuits moeten vrij liggen om te kunnen matchen
-	/// check moet: 
-	///	- kopie maken van alle tegels in spel
-	/// - alle niet vrijliggende tiles verwijderen van de kopie
-	/// - controleren of de vrijliggende tiles een wholeSuit = true bevat en of 2 tiles matchen
-
-	// self.endGame = function() {
-	// 	var matchCount = 0;
-	// 	var wholeSuitCount = 0;
-	// 	for (var l = 0; l < self.tiles.length; l++) {
-	// 		if (!self.tiles[l].tile.matchesWholeSuit) {
-	// 			for (var r = 0; r < self.tiles.length; r++) {
-	// 				if ((!self.tiles[l] == self.tiles[r])) {
-	// 					if (self.tiles[l].)
-	// 				}
-	// 			}
-	// 			wholeSuitCount++;
-	// 		}
-	// 	}
-	// }
-
 
 	self.showMessageBox = function() {
 		$timeout(function() {
@@ -75,16 +59,6 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 			self.errorMessage = '';
 		}, 3000);
 	};
-
-	function init() {
-		gameFactory.setCurrentGameId($stateParams.id);
-		gameFactory.setCurrentGameMode($stateParams.mode);
-
-		getGameBoard();
-		getGame();
-
-		gameSocket.connect($stateParams.id);
-	}
 
 	/// Sockets
 
@@ -95,28 +69,31 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 	gameSocket.on('end', function (data) {
 		self.successMessage = 'There are no more moves left. The game is over.';
 		self.showMessageBox();
+		console.log('game end!!!');
+		console.log(data);
+		self.game.state = 'finished'; // can it be fluid
 	});
 	gameSocket.on('playerjoined', function (data) {
 		self.successMessage = 'player: ' + data.data._id + ' joined the game.';
 		self.showMessageBox();
+		// TODO add player to game
 	});
 	gameSocket.on('match', function (data) {
 		for (var i =0; i < data.data.length; i++) {
-			removeTile(data.data[i]._id);
+			// removeTile(data.data[i]._id);
+			tileService.linkRemoveTile(data.data[i]._id)
 		}
 
 		// set new score of opponent.
 		console.log('opponent has a found a new match.');
 		console.log(data);
+
+		// tileService.linkSetScore(/*username*/);
 	});
 
-	function removeTile(tileId) {
-		$('div[tileid="' + tileId + '"]').remove();
-	}
-
-	self.test = function() {
-
-	}
+	// function removeTile(tileId) {
+	// 	$('div[tileid="' + tileId + '"]').remove();
+	// }
 
 	self.cheat = function() {
 		tileService.cheatTile();
