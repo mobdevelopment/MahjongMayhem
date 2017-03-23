@@ -28240,4 +28240,10 @@
   position: relative;
 }
 
+.gameDetails {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 /*# sourceMappingURL=app.css.map */

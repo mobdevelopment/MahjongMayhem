@@ -124,6 +124,7 @@ module.exports = function($scope, $http, $q, $timeout, gameService, authService)
 	};
 
 	self.showGameDetail = function(game) {
+		// console.log(game);	
 		self.gameDetail = game;
 	};
 
