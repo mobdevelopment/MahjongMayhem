@@ -17,9 +17,11 @@ module.exports = function(gameService, gameFactory, authService) {
 					var match = checkTileMatch(self.matchTile, tile);
 					// if (gameFactory.getCurrentGameMode() == 'play' && match) {
 					if (match) {
-						// gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
-						console.log('fake:: pushing match to api');
-						setScore(authService.getUser());
+						gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
+						console.log('real:: pushing match to api');
+						// console.log('fake:: pushing match to api');
+						var user = authService.getUser();
+						setScore(user.username);
 						removeTile(self.matchTile._id);
 						removeTile(tile._id);
 						setGameOver();
@@ -78,10 +80,10 @@ module.exports = function(gameService, gameFactory, authService) {
 		setScore(username);
 	}
 
-	function setScore(user) {
+	function setScore(username) {
 		var game = gameFactory.getCurrentGame();
 		game.players.forEach(function (userElem) {
-			if (userElem._id == user.username) {
+			if (userElem._id == username) {
 				userElem.numberOfMatches = userElem.numberOfMatches+1;
 			}
 		});
@@ -115,6 +117,8 @@ module.exports = function(gameService, gameFactory, authService) {
 		if (gameOverCheck()) {
 			var game = gameFactory.getCurrentGame();
 			game.state = 'finished';
+			// set gameover??
+			// gameService
 			console.log('gameover');
 		}
 	}

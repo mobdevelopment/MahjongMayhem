@@ -70,7 +70,6 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 		self.successMessage = 'There are no more moves left. The game is over.';
 		self.showMessageBox();
 		console.log('game end!!!');
-		console.log(data);
 		self.game.state = 'finished'; // can it be fluid
 	});
 	gameSocket.on('playerjoined', function (data) {
@@ -79,21 +78,17 @@ module.exports = function($scope, $stateParams, $http, $q, $timeout, gameService
 		// TODO add player to game
 	});
 	gameSocket.on('match', function (data) {
-		for (var i =0; i < data.data.length; i++) {
+		console.log(data);
+		for (var i =0; i < data.length; i++) {
 			// removeTile(data.data[i]._id);
-			tileService.linkRemoveTile(data.data[i]._id)
+			tileService.linkRemoveTile(data[i]._id)
 		}
 
 		// set new score of opponent.
 		console.log('opponent has a found a new match.');
-		console.log(data);
 
-		// tileService.linkSetScore(/*username*/);
+		tileService.linkSetScore(data[0].match.foundBy);
 	});
-
-	// function removeTile(tileId) {
-	// 	$('div[tileid="' + tileId + '"]').remove();
-	// }
 
 	self.cheat = function() {
 		tileService.cheatTile();

@@ -28238,12 +28238,7 @@
 
 .blocked {
   position: relative;
-}
-
-.gameDetails {
-  position: fixed;
-  top: 0;
-  left: 0;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=app.css.map */
