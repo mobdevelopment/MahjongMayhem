@@ -1,10 +1,29 @@
 @import "sprite";
+@import "theme";
 
 .navbar-nav>li>a {
 	color: #262626;
 }
 
+.navbar {
+	background-color: grey;
+	border-bottom-radius: 2px;
+}
+
 .blocked {
     position:relative;
     pointer-events: none;
+}
+
+
+.board {
+	// background-color: #277714;	// felt green
+	background-color: rgb(39, 119, 20);
+	border-radius: 25px;
+    border: 5px solid rgb(119, 74, 19);
+    padding: 20px; 
+}
+
+@each $key, $value in $themes {
+  @include theme($key, $value);
 }

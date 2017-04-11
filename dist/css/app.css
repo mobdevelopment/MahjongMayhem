@@ -28236,9 +28236,35 @@
   color: #262626;
 }
 
+.navbar {
+  background-color: grey;
+  border-bottom-radius: 2px;
+}
+
 .blocked {
   position: relative;
   pointer-events: none;
+}
+
+.board {
+  background-color: #277714;
+  border-radius: 25px;
+  border: 5px solid #774a13;
+  padding: 20px;
+}
+
+.default .element {
+  color: #F0AD4E;
+}
+.default .other-element {
+  background: #f4ea7d;
+}
+
+.night .element {
+  color: #464852;
+}
+.night .other-element {
+  background: #605d6e;
 }
 
 /*# sourceMappingURL=app.css.map */
