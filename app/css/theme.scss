@@ -1,7 +1,3 @@
-$themes: (
-	default: #F0AD4E,
-	night: #464852,
-);
 
 
 @mixin theme($name, $color) {
@@ -9,12 +5,14 @@ $themes: (
 	$secondary: lighten(adjust-hue($color, 20), 10%);
 
 	.#{$name} {
-		.element {
-		  color: $primary;
+		 background-color: $primary;
+
+		@if $name == "default" {
+			color: #000000;
 		}
 
-		.other-element {
-			background: $secondary;
-		}
+		@if $name == "night" {
+			color: #000000;
+		}			
 	}
 }

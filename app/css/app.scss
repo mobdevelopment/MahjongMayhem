@@ -15,7 +15,6 @@
     pointer-events: none;
 }
 
-
 .board {
 	// background-color: #277714;	// felt green
 	background-color: rgb(39, 119, 20);
@@ -24,6 +23,16 @@
     padding: 20px; 
 }
 
+.themeContainer {
+	float: right;
+	margin-right: 2em;
+}
+
+$themes: (
+	default: #F0AD4E,
+	night: #464852,
+);
+
 @each $key, $value in $themes {
-  @include theme($key, $value);
+	@include theme($key, $value);
 }

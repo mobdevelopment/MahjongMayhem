@@ -21,7 +21,7 @@ module.exports = function(gameService, gameFactory, authService) {
 						console.log('real:: pushing match to api');
 						// console.log('fake:: pushing match to api');
 						var user = authService.getUser();
-						setScore(user.username);
+						// setScore(user.username);
 						removeTile(self.matchTile._id);
 						removeTile(tile._id);
 						setGameOver();

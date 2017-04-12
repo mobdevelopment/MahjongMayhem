@@ -6,5 +6,9 @@
  			<li><a ui-sref="logout">{{gameCon.currentUser.username}} Logout</a></li>
  		</ul>
 	</div>
+	<div class="themeContainer">
+		<button class="btn btn-success" ng-click="gc.theme('default')" data-theme="default">default</button>
+		<button class="btn btn-success" ng-click="gc.theme('night')" data-theme="night">night</button>
+	</div>
 	<!-- Menu for choosing theme's -->
 </nav> 

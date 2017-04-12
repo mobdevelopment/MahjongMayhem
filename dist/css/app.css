@@ -28253,18 +28253,19 @@
   padding: 20px;
 }
 
-.default .element {
-  color: #F0AD4E;
-}
-.default .other-element {
-  background: #f4ea7d;
+.themeContainer {
+  float: right;
+  margin-right: 2em;
 }
 
-.night .element {
-  color: #464852;
+.default {
+  background-color: #F0AD4E;
+  color: #000000;
 }
-.night .other-element {
-  background: #605d6e;
+
+.night {
+  background-color: #464852;
+  color: #000000;
 }
 
 /*# sourceMappingURL=app.css.map */
