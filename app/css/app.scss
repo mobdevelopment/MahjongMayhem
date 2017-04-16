@@ -6,7 +6,6 @@
 }
 
 .navbar {
-	background-color: grey;
 	border-bottom-radius: 2px;
 }
 
@@ -28,11 +27,3 @@
 	margin-right: 2em;
 }
 
-$themes: (
-	default: #F0AD4E,
-	night: #464852,
-);
-
-@each $key, $value in $themes {
-	@include theme($key, $value);
-}

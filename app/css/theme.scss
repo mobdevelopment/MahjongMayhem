@@ -1,18 +1,46 @@
+$themes: (
+	default:(fontClr: black,
+			 navClr: #E8E8E8,
+			 backgroundPrimary: #E8E8E8,		// 
+			 backgroundSecondary: #F3F3F3,		// 
+			 tableRowEven: #FFFFFF, 			// white
+			 tableRowOdd: #F3F3F3),				// 
+	night: 	(fontClr: lightgrey,
+			 navClr: grey,
+			 backgroundPrimary: #464852,		// 464852
+			 backgroundSecondary: #464852,		// 626577
+			 tableRowEven: #000000,				// 
+			 tableRowOdd: #2f3135)				// 
+);
 
+$orange: #F0AD4E;
 
-@mixin theme($name, $color) {
-	$primary: $color;
-	$secondary: lighten(adjust-hue($color, 20), 10%);
+@each $theme, $map in $themes {
+	// @include theme($key, $value);
+	.#{$theme} {
+		color: map-get($map, fontClr);
+		background-color: map-get($map, backgroundPrimary);
 
-	.#{$name} {
-		 background-color: $primary;
-
-		@if $name == "default" {
-			color: #000000;
+		.container {
+			background-color: map-get($map, backgroundSecondary);
+		}
+		.navbar {
+			background-color: map-get($map, navClr);
 		}
 
-		@if $name == "night" {
-			color: #000000;
-		}			
+		thead > tr {
+			background-color: map-get($map, tableRowEven);
+		}
+
+		tbody > tr:nth-child(odd) {
+			background-color: map-get($map, tableRowOdd);
+		}
+		tbody > tr:nth-child(even) {
+			background-color: map-get($map, tableRowEven);
+		}
+
+		input, select {
+			color: black;
+		}
 	}
 }

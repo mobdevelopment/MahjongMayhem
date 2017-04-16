@@ -7,13 +7,10 @@ module.exports = function() {
 			model: '='
 		},
 		controller: function($scope, $stateParams, tileService) {
-			// console.log("tile loading");
-			var selectedTile;
 
 			$scope.click = function(tile) {
 				// do stuff
 				var checkTile = tileService.checkTile(tile);
-
 			}
 		},
 		link: function(scope, element, attrs) {

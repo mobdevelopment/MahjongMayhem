@@ -37,6 +37,10 @@ module.exports = function(){
 	factory.getCurrentGame = function() {
 		return factory.currentGame;
 	};
+
+	factory.getPlayers = function() {
+		return factory.currentGame.players;
+	}
 	
 	return factory;
 };

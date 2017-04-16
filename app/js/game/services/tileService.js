@@ -4,37 +4,38 @@ module.exports = function(gameService, gameFactory, authService) {
 
 	self.matchTile = null;
 
-	service.checkTile = function(tile) {
-		if (checkTileSelectable(tile)) {
-			if (self.matchTile == null) {
-				selectTile(tile);
-				self.matchTile = tile;
+	service.checkTileSelectable = function(tile) {
+		if (playerInGame()) {
+			if (checkTileSelectable(tile)) {
+				if (self.matchTile == null) {
+					selectTile(tile);
+					self.matchTile = tile;
 
-				return null;
-			} else if (self.matchTile != null) {
-				if (self.matchTile._id != tile._id) {
+					return null;
+				} else if (self.matchTile != null) {
+					if (self.matchTile._id != tile._id) {
 
-					var match = checkTileMatch(self.matchTile, tile);
-					// if (gameFactory.getCurrentGameMode() == 'play' && match) {
-					if (match) {
-						gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
-						console.log('real:: pushing match to api');
-						// console.log('fake:: pushing match to api');
-						var user = authService.getUser();
-						// setScore(user.username);
-						removeTile(self.matchTile._id);
-						removeTile(tile._id);
-						setGameOver();
+						var match = checkTileMatch(self.matchTile, tile);
+						if (match) {
+							gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
+
+							var user = authService.getUser();
+							// setScore(user.username); // turned of because socket also sets score, and socket also updates sender
+							removeTile(self.matchTile._id);
+							removeTile(tile._id);
+							setGameOver();
+						}
 					}
+					deselectTile();
+					self.matchTile = null;
+
+					return null;
 				}
-				deselectTile();
-				self.matchTile = null;
 
-				return null;
 			}
-
-		}
-		return self.matchTile;
+			return self.matchTile;
+		} 
+		return null;
 	}
 
 	service.cheatTile = function() {
@@ -117,8 +118,7 @@ module.exports = function(gameService, gameFactory, authService) {
 		if (gameOverCheck()) {
 			var game = gameFactory.getCurrentGame();
 			game.state = 'finished';
-			// set gameover??
-			// gameService
+
 			console.log('gameover');
 		}
 	}
@@ -161,11 +161,8 @@ module.exports = function(gameService, gameFactory, authService) {
 				(tileElem.yPos >= (tile.yPos - 1) && tileElem.yPos <= (tile.yPos + 1))) {
 				// check for tiles on top of the tiles
 				if (tileElem.zPos > tile.zPos) {
-					// console.log('topcheck');
-					// console.log(tileElem);
-					if ((tileElem.xPos >= (tile.xPos - 1) && tileElem.xPos <= (tile.xPos + 1))) {
-						// console.log('false:: top enclosed ');
 
+					if ((tileElem.xPos >= (tile.xPos - 1) && tileElem.xPos <= (tile.xPos + 1))) {
 						return result = false;
 					}
 				}
@@ -173,20 +170,15 @@ module.exports = function(gameService, gameFactory, authService) {
 				if (tileElem.zPos == tile.zPos) {
 					// check the left side.
 					if (tileElem.xPos == (tile.xPos - 2)) {
-						// console.log('leftcheck');
-						// console.log(tileElem);
 						if (tileRight) {
-							// console.log('false:: left and right enclosed (left)');
 							return result = false;
 						}
 						tileLeft = true;
 					}
 					// check the right side.
 					if(tileElem.xPos == (tile.xPos + 2)) {
-						// console.log('rightcheck');
-						// console.log(tileElem);
+
 						if (tileLeft) {
-							// console.log('false:: left and right enclosed (right)');
 							return result = false;
 						}
 						tileRight = true;
@@ -201,6 +193,20 @@ module.exports = function(gameService, gameFactory, authService) {
 		gameFactory.setCurrentBoard(gameFactory.getCurrentBoard().filter(function (elem) {
 			return elem._id !== tileId;
 		}));
+	}
+
+	function playerInGame() {
+		var select = false;
+		var user = authService.getUser();
+		var players = gameFactory.getPlayers();
+		
+		players.forEach(function (player) {
+			if (player._id == user.username) {
+				select =  true;
+			}
+		});
+		console.log(select);
+		return select;
 	}
 
 	return service;

@@ -1,4 +1,4 @@
-module.exports = function($scope, authService) {
+module.exports = function($scope, authService, alertService) {
 	var self = this;
 	// $scope.token = window.localStorage['token'];
 	self.currentUser = authService.getUser();
@@ -13,5 +13,4 @@ module.exports = function($scope, authService) {
 		console.log(theme);
 		window.localStorage['theme'] = theme;
 	};
-
 };

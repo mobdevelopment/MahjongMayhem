@@ -28232,12 +28232,57 @@
   margin-top: 623;
 }
 
+.default {
+  color: black;
+  background-color: #E8E8E8;
+}
+.default .container {
+  background-color: #F3F3F3;
+}
+.default .navbar {
+  background-color: #E8E8E8;
+}
+.default thead > tr {
+  background-color: #FFFFFF;
+}
+.default tbody > tr:nth-child(odd) {
+  background-color: #F3F3F3;
+}
+.default tbody > tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+.default input, .default select {
+  color: black;
+}
+
+.night {
+  color: lightgrey;
+  background-color: #464852;
+}
+.night .container {
+  background-color: #464852;
+}
+.night .navbar {
+  background-color: grey;
+}
+.night thead > tr {
+  background-color: #000000;
+}
+.night tbody > tr:nth-child(odd) {
+  background-color: #2f3135;
+}
+.night tbody > tr:nth-child(even) {
+  background-color: #000000;
+}
+.night input, .night select {
+  color: black;
+}
+
 .navbar-nav > li > a {
   color: #262626;
 }
 
 .navbar {
-  background-color: grey;
   border-bottom-radius: 2px;
 }
 
@@ -28256,16 +28301,6 @@
 .themeContainer {
   float: right;
   margin-right: 2em;
-}
-
-.default {
-  background-color: #F0AD4E;
-  color: #000000;
-}
-
-.night {
-  background-color: #464852;
-  color: #000000;
 }
 
 /*# sourceMappingURL=app.css.map */
