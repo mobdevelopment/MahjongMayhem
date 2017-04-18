@@ -4,7 +4,7 @@ module.exports = function(gameService, gameFactory, authService) {
 
 	self.matchTile = null;
 
-	service.checkTileSelectable = function(tile) {
+	service.checkTile = function(tile) {
 		if (playerInGame()) {
 			if (checkTileSelectable(tile)) {
 				if (self.matchTile == null) {
@@ -17,7 +17,7 @@ module.exports = function(gameService, gameFactory, authService) {
 
 						var match = checkTileMatch(self.matchTile, tile);
 						if (match) {
-							gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
+							// gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
 
 							var user = authService.getUser();
 							// setScore(user.username); // turned of because socket also sets score, and socket also updates sender
@@ -193,6 +193,7 @@ module.exports = function(gameService, gameFactory, authService) {
 		gameFactory.setCurrentBoard(gameFactory.getCurrentBoard().filter(function (elem) {
 			return elem._id !== tileId;
 		}));
+		console.log(gameFactory.getCurrentBoard());
 	}
 
 	function playerInGame() {
@@ -205,7 +206,7 @@ module.exports = function(gameService, gameFactory, authService) {
 				select =  true;
 			}
 		});
-		console.log(select);
+		// console.log(select);
 		return select;
 	}
 

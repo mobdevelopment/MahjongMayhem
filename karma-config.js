@@ -10,7 +10,8 @@ module.exports = function (config) {
             'app/**/*.js',
             // Angular-mocks moet na app.js geladen worden omdat daar angular in zit
             'node_modules/angular-mocks/angular-mocks.js',
-            'test/*.spec.js'
+            'test/*.spec.js',
+            'http://localhost:3000/socket.io/socket.io.js'
         ],
  
         reporters: ['progress', 'coverage'],
