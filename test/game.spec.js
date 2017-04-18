@@ -46,6 +46,7 @@ describe('gameController', function(){
 		httpBackend = $httpBackend;
 
 		authService = $injector.get('authService');
+		authService.setUser('man.schouten@student.avans.nl', '65454198894843');
 		gameFactory = $injector.get('gameFactory');
 		gameService = $injector.get('gameService');
 		tileService = $injector.get('tileService');		
@@ -53,7 +54,7 @@ describe('gameController', function(){
 		gameController = $controller('gameController', { $scope: scope });
 		// gameBoardController = $controller('gameBoardController', { $scope: scope });
 
-		authService.setUser('man.schouten@student.avans.nl', '65454198894843');
+		
 
 	}));
 
@@ -65,11 +66,35 @@ describe('gameController', function(){
 				minPlayers: 2,
 				players: [ {} , {}, {}, {}],
 				state: "open",
+				createdBy: {
+					name: "Mark van Kleef",
+					__v: 0,
+					_id: "mv.kleef@student.avans.nl"
+				},
 			}
 			// When
 			canJoin = gameController.canJoin(game);
 			// Then
 			expect(canJoin).to.equal(false);
+
+		});
+
+		it('should return true when not enough players', function() {
+			// Given
+			var game = {
+				maxPlayers: 4,
+				minPlayers: 2,
+				players: [ {} , {}, {}],
+				state: "open",
+				createdBy: {
+					name: "Mark van Kleef",
+					__v: 0,
+					_id: "mv.kleef@student.avans.nl"
+				},			}
+			// When
+			canJoin = gameController.canJoin(game);
+			// Then
+			expect(canJoin).to.equal(true);
 
 		});
 
@@ -80,6 +105,11 @@ describe('gameController', function(){
 				minPlayers: 4,
 				players: [ {} , {}, {}],
 				state: "open",
+				createdBy: {
+					name: "Mark van Kleef",
+					__v: 0,
+					_id: "mv.kleef@student.avans.nl"
+				},
 			}
 			// When
 			canPlay = gameController.canPlay(game);
@@ -100,6 +130,11 @@ describe('gameController', function(){
 					}
 				],
 				state: "closed",
+				createdBy: {
+					name: "Mark van Kleef",
+					__v: 0,
+					_id: "mv.kleef@student.avans.nl"
+				},
 			}
 			// When
 			canJoin = gameController.canJoin(game);
