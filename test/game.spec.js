@@ -47,9 +47,11 @@ describe('gameController', function(){
 
 		authService = $injector.get('authService');
 		authService.setUser('man.schouten@student.avans.nl', '65454198894843');
+
 		gameFactory = $injector.get('gameFactory');
 		gameService = $injector.get('gameService');
-		tileService = $injector.get('tileService');		
+		tileService = $injector.get('tileService');
+		socketService = $injector.get('gameSocket')		
 
 		gameController = $controller('gameController', { $scope: scope });
 		// gameBoardController = $controller('gameBoardController', { $scope: scope });
@@ -266,8 +268,6 @@ describe('gameController', function(){
 	// 		gameFactory.setCurrentGame(_game);
 	// 		gameFactory.setCurrentBoard(gameBoard);
 
-	// 		authService.setUser('man.schouten@student.avans.nl', '781872367823647812346983746');
-
 	// 		tileService.checkTile(tile1);
 	// 		tileService.checkTile(tile2);
 
@@ -278,8 +278,6 @@ describe('gameController', function(){
 	// 	it('should be finish the game', function() {
 	// 		gameFactory.setCurrentGame(_game);
 	// 		gameFactory.setCurrentBoard(gameBoard);
-
-	// 		authService.setUser('man.schouten@student.avans.nl', '781872367823647812346983746');
 
 	// 		tileService.checkTile(tile1);
 	// 		tileService.checkTile(tile2);

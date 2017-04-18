@@ -17,7 +17,7 @@ module.exports = function(gameService, gameFactory, authService) {
 
 						var match = checkTileMatch(self.matchTile, tile);
 						if (match) {
-							// gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
+							gameService.postMatchedTiles(gameFactory.getCurrentGameId(), self.matchTile._id, tile._id);
 
 							var user = authService.getUser();
 							// setScore(user.username); // turned of because socket also sets score, and socket also updates sender
